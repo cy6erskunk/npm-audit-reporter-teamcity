@@ -4,9 +4,16 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Igor Shevchenko",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "teamcity-service-messages": "^0.1.9"
+  },
+  "devDependencies": {
+    "@types/node": "^11.12.2"
+  }
 }
