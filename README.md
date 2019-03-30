@@ -1,6 +1,7 @@
 ## npm audit reporter for TeamCity
+[![NPM version](https://img.shields.io/npm/v/npm-audit-reporter-teamcity.svg)](https://www.npmjs.com/package/npm-audit-reporter-teamcity)
 
-Generates TeamCity inspections from the [npm audit](https://docs.npmjs.com/cli/audit.html)report
+Generates TeamCity inspections from the [npm audit](https://docs.npmjs.com/cli/audit.html) report
 ![Demo report](tc-ui.png)
 
 ### Installation
