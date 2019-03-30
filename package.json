@@ -1,13 +1,14 @@
 {
   "name": "npm-audit-reporter-teamcity",
   "version": "0.1.0",
-  "description": "",
+  "description": "generate TeamCity code inspections from the output of `npm audit`",
   "main": "dist/index.js",
+  "bin": "bin/index.js",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["teamcity", "audit"],
   "author": "Igor Shevchenko",
   "license": "MIT",
   "dependencies": {
