@@ -1,4 +1,4 @@
-import { Config } from './index';
+import { Config } from './config';
 
 type VersionString = string;
 type DateString = string;
