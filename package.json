@@ -1,13 +1,13 @@
 {
   "name": "npm-audit-reporter-teamcity",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "generate TeamCity code inspections from the output of `npm audit`",
   "main": "dist/index.js",
   "bin": "bin/index.js",
   "scripts": {
     "build": "tsc",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
     "test": "jest --detectOpenHandles"
   },
   "keywords": [
