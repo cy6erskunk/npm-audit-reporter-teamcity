@@ -1,36 +1,36 @@
-import { Config } from './config';
+import { IConfig } from './config';
 
 type VersionString = string;
 type DateString = string;
-type ActionString = "install" | "update";
-type Access = "public" | "private";
-type Severity = "moderate" | "low" | "high";
-type ModuleType = "";
-interface ResolvePackage {
+type ActionString = 'install' | 'update';
+type Access = 'public' | 'private';
+type Severity = 'moderate' | 'low' | 'high';
+type ModuleType = '';
+interface IResolvePackage {
   id: number,
   path: string,
   dev: boolean,
   optional: boolean,
   bundled: boolean
 }
-interface Action {
+interface IAction {
   module: string,
-  resolves: Array<ResolvePackage>,
+  resolves: IResolvePackage[],
   target: VersionString,
   action: ActionString,
   isMajor?: boolean,
   depth?: number
 }
-interface AdvisoryFinding {
+interface IAdvisoryFinding {
   version: string,
-  paths: Array<string>,
+  paths: string[],
   dev: boolean,
   optional: boolean,
   bundled: boolean
 }
 
-interface AdvisoryObject {
-  findings: Array<AdvisoryFinding>,
+interface IAdvisoryObject {
+  findings: IAdvisoryFinding[],
   id: number,
   created: DateString,
   updated: DateString,
@@ -45,7 +45,7 @@ interface AdvisoryObject {
     name: string
   },
   module_name: string,
-  cves: Array<string>,
+  cves: string[],
   vulnerable_versions: string,
   patched_versions: string,
   overview: string,
@@ -62,11 +62,11 @@ interface AdvisoryObject {
   url: string
 }
 
-interface Advisories {
-  [id: string]: AdvisoryObject
+interface IAdvisories {
+  [id: string]: IAdvisoryObject
 }
 
-interface AuditMetadata {
+interface IAuditMetadata {
   vulnerabilities: {
     info: number,
     low: number,
@@ -79,17 +79,17 @@ interface AuditMetadata {
   optionalDependencies: number,
   totalDependencies: number
 }
-interface AuditOutput {
-  actions: Array<Action>,
-  advisories: Advisories,
-  muted: Array<string>,
-  metadata: AuditMetadata,
+export interface IAuditOutput {
+  actions: IAction[],
+  advisories: IAdvisories,
+  muted: string[],
+  metadata: IAuditMetadata,
   runId: string
 }
 
 type TeamcityServiceMessages = any;
 
-function isVulnerable(auditMetadata: AuditMetadata) {
+function isVulnerable(auditMetadata: IAuditMetadata) {
   return auditMetadata.vulnerabilities.info +
     auditMetadata.vulnerabilities.low +
     auditMetadata.vulnerabilities.moderate +
@@ -98,22 +98,23 @@ function isVulnerable(auditMetadata: AuditMetadata) {
 }
 export default function reporter(
   tsm: TeamcityServiceMessages,
-  { inspectionTypeId, inspectionName, inspectionCategory, inspectionSeverity }: Config,
+  { inspectionTypeId, inspectionName, inspectionCategory, inspectionSeverity }: IConfig,
 ) {
 
-  return function (auditResult: AuditOutput) {
+  return (auditResult: IAuditOutput) => {
     if (isVulnerable(auditResult.metadata)) {
       tsm.inspectionType({
-        id: inspectionTypeId,
-        name: inspectionName,
         category: inspectionCategory,
         description: 'https://docs.npmjs.com/cli/audit.html',
+        id: inspectionTypeId,
+        name: inspectionName,
       });
 
 
       Object.keys(auditResult.advisories).forEach(advisoryId => {
         tsm.inspection({
-          typeId: inspectionTypeId,
+          SEVERITY: inspectionSeverity,
+          file: `module: "${auditResult.advisories[advisoryId].module_name}"`,
           message: `${auditResult.advisories[advisoryId].overview}
 severity: ${auditResult.advisories[advisoryId].severity},
 versions: ${auditResult.advisories[advisoryId].findings.map(f => f.version).join(', ')},
@@ -121,8 +122,7 @@ vulnerable_versions: ${auditResult.advisories[advisoryId].vulnerable_versions},
 patched_versions: ${auditResult.advisories[advisoryId].patched_versions},
 recommendation: ${auditResult.advisories[advisoryId].recommendation},
 advisory: ${auditResult.advisories[advisoryId].url}`,
-          file: `module: "${auditResult.advisories[advisoryId].module_name}"`,
-          SEVERITY: inspectionSeverity,
+          typeId: inspectionTypeId,
         })
       })
     }

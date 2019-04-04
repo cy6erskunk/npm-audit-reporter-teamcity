@@ -1,6 +1,7 @@
+// tslint:disable-next-line:no-var-requires
 const tsm = require('teamcity-service-messages');
-import reporterFactory from './reporter';
 import { getConfig } from './config';
+import reporterFactory from './reporter';
 
 let input = '';
 

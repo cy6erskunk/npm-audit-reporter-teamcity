@@ -1,13 +1,12 @@
 const tsm = {
-  inspectionType: jest.fn(),
   inspection: jest.fn(),
+  inspectionType: jest.fn(),
 }
 
-import reporterFactory from '../src/reporter';
 import defaultConfig from '../src/config'
+import reporterFactory from '../src/reporter';
 
-const noVulnerabilities = require('./mocks/empty');
-const multipleVulnerabilities = require('./mocks/multiple')
+import {multipleVulnerabilities, noVulnerabilities}  from './mocks/';
 
 describe('nsp teamcity reporter', () => {
   beforeEach(() => {
