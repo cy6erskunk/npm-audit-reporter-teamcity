@@ -1,33 +1,34 @@
-export interface Config {
+import {debug} from './tools'
+export interface IConfig {
   inspectionTypeId: string,
   inspectionName: string,
   inspectionCategory: string,
   inspectionSeverity: string
 }
 
-export interface UserConfig {
+export interface IUserConfig {
   inspectionTypeId?: string,
   inspectionName?: string,
   inspectionCategory?: string,
   inspectionSeverity?: string
 }
 
-const defaultConfig: Config = {
-  inspectionTypeId: 'npm-audit-security-inspection',
-  inspectionName: 'NPM audit security inspection',
+const defaultConfig: IConfig = {
   inspectionCategory: 'security',
+  inspectionName: 'NPM audit security inspection',
   inspectionSeverity: 'WARNING',
+  inspectionTypeId: 'npm-audit-security-inspection',
 }
 
 const CONFIG_FILENAME = 'npm-audit-reporter.conf.json';
 
-export function getConfig(): Config {
-  let config: UserConfig = {};
+export function getConfig(): IConfig {
+  let config: IUserConfig = {};
   try {
     config =
       require(`${process.cwd()}/${CONFIG_FILENAME}`);
   } catch (e) {
-    process.env.DEBUG && console.log('Something went wrong:', e);
+    debug('Something went wrong:', e);
     if (e.code !== 'MODULE_NOT_FOUND') {
       throw e;
     }
@@ -37,9 +38,11 @@ export function getConfig(): Config {
     ...defaultConfig,
     ...config
   };
-  process.env.DEBUG && console.log('Config to use:', config);
+  
+  debug('Config to use:', config.toString());
 
-  return <Config>config;
-}
+  return config as IConfig;
+  }
+
 
 export default defaultConfig;

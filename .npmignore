@@ -1,5 +1,7 @@
 src
 test
 tsconfig.json
+tslint.json
 .travis.yml
+jest.config.js
 dist/**/*.js.map
