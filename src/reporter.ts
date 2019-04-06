@@ -1,4 +1,5 @@
 import { IConfig } from './config';
+import { debug } from './util';
 
 type VersionString = string;
 type DateString = string;
@@ -100,28 +101,29 @@ export default function reporter(
   tsm: TeamcityServiceMessages,
   { inspectionTypeId, inspectionName, inspectionCategory, inspectionSeverity }: IConfig,
 ) {
-
   return (auditResult: IAuditOutput) => {
     if (isVulnerable(auditResult.metadata)) {
       tsm.inspectionType({
         category: inspectionCategory,
-        description: 'https://docs.npmjs.com/cli/audit.html',
+        description: "https://docs.npmjs.com/cli/audit.html",
         id: inspectionTypeId,
         name: inspectionName,
       });
 
 
       Object.keys(auditResult.advisories).forEach(advisoryId => {
+        const advisoryElement = auditResult.advisories[advisoryId];
+        debug("current element:", advisoryElement)
         tsm.inspection({
           SEVERITY: inspectionSeverity,
-          file: `module: "${auditResult.advisories[advisoryId].module_name}"`,
-          message: `${auditResult.advisories[advisoryId].overview}
-severity: ${auditResult.advisories[advisoryId].severity},
-versions: ${auditResult.advisories[advisoryId].findings.map(f => f.version).join(', ')},
-vulnerable_versions: ${auditResult.advisories[advisoryId].vulnerable_versions},
-patched_versions: ${auditResult.advisories[advisoryId].patched_versions},
-recommendation: ${auditResult.advisories[advisoryId].recommendation},
-advisory: ${auditResult.advisories[advisoryId].url}`,
+          file: `module: "${advisoryElement.module_name}"`,
+          message: `${advisoryElement.overview}
+severity: ${advisoryElement.severity},
+versions: ${advisoryElement.findings.map(f => f.version).join(', ')},
+vulnerable_versions: ${advisoryElement.vulnerable_versions},
+patched_versions: ${advisoryElement.patched_versions},
+recommendation: ${advisoryElement.recommendation},
+advisory: ${advisoryElement.url}`,
           typeId: inspectionTypeId,
         })
       })

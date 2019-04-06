@@ -1,4 +1,4 @@
-import {debug} from './tools'
+import {debug} from './util'
 export interface IConfig {
   inspectionTypeId: string,
   inspectionName: string,
@@ -39,7 +39,7 @@ export function getConfig(): IConfig {
     ...config
   };
   
-  debug('Config to use:', config.toString());
+  debug('Config to use:', config);
 
   return config as IConfig;
   }
