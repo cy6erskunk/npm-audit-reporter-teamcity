@@ -33,3 +33,5 @@ Put `npm-audit-reporter.conf.json` config file in a project root directory to ov
   "inspectionSeverity": "WARNING",
 }
 ```
+
+- To debug provide truthy `DEBUG` env variable (e.g. `DEBUG=1 npm run audit:ci`)

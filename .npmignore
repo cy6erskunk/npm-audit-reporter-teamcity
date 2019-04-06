@@ -2,6 +2,7 @@ src
 test
 tsconfig.json
 tslint.json
+.prettierrc
 .travis.yml
 jest.config.js
 dist/**/*.js.map
