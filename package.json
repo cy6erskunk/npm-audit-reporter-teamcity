@@ -14,6 +14,8 @@
   },
   "keywords": [
     "teamcity",
+    "npm",
+    "security",
     "audit"
   ],
   "author": "Igor Shevchenko",
@@ -31,5 +33,9 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cy6erskunk/npm-audit-reporter-teamcity/"
   }
 }
