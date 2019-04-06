@@ -10,6 +10,6 @@ process.stdin.on('data', data => {
 });
 
 process.stdin.on('end', data => {
-  const reporter = reporterFactory(tsm, getConfig())
+  const reporter = reporterFactory(tsm, getConfig());
   reporter(JSON.parse(input));
 });
