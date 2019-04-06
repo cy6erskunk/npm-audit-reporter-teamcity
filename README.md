@@ -1,5 +1,5 @@
 ## npm audit reporter for TeamCity
-[![Build Status](https://travis-ci.org/cy6erskunk/npm-audit-reporter-teamcity.svg?branch=master)](https://travis-ci.org/cy6erskunk/npm-audit-reporter-teamcity)
+[![Build Status](https://travis-ci.com/cy6erskunk/npm-audit-reporter-teamcity.svg?branch=master)](https://travis-ci.com/cy6erskunk/npm-audit-reporter-teamcity)
 [![NPM version](https://img.shields.io/npm/v/npm-audit-reporter-teamcity.svg)](https://www.npmjs.com/package/npm-audit-reporter-teamcity)
 
 Generates TeamCity inspections from the [npm audit](https://docs.npmjs.com/cli/audit.html) report
