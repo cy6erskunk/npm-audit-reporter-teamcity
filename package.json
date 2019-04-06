@@ -14,6 +14,8 @@
   },
   "keywords": [
     "teamcity",
+    "npm",
+    "security",
     "audit"
   ],
   "author": "Igor Shevchenko",
@@ -35,5 +37,9 @@
     "printWidth": 120,
     "trailingComma": "all",
     "singleQuote": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cy6erskunk/npm-audit-reporter-teamcity/"
   }
 }
