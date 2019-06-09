@@ -6,3 +6,5 @@ tslint.json
 .travis.yml
 jest.config.js
 dist/**/*.js.map
+.vscode
+.DS_Store
