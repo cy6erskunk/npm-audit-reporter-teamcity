@@ -24,7 +24,7 @@
     "teamcity-service-messages": "^0.1.9"
   },
   "devDependencies": {
-    "@types/jest": "24.0.13",
+    "@types/jest": "24.0.15",
     "@types/node": "11.13.13",
     "jest": "24.8.0",
     "prettier": "1.18.2",
