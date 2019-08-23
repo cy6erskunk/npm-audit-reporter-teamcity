@@ -13,14 +13,14 @@ export interface IUserConfig {
   inspectionSeverity?: string;
 }
 
-const defaultConfig: IConfig = {
+export const defaultConfig: IConfig = {
   inspectionCategory: 'security',
   inspectionName: 'NPM audit security inspection',
   inspectionSeverity: 'WARNING',
   inspectionTypeId: 'npm-audit-security-inspection',
 };
 
-const CONFIG_FILENAME = 'npm-audit-reporter.conf.json';
+export const CONFIG_FILENAME = 'npm-audit-reporter.conf.json';
 
 export function getConfig(): IConfig {
   let config: IUserConfig = {};
@@ -42,5 +42,3 @@ export function getConfig(): IConfig {
 
   return config as IConfig;
 }
-
-export default defaultConfig;
