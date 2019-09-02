@@ -4,16 +4,16 @@
     "config:base"
   ],
   "packageRules": [{
-    "depTypeList": ["devDependencies"],
-    "automerge": true,
-    "major": {
-      "automerge": false
-    }
-  },{
     "depTypeList": ["dependencies"],
     "automerge": false,
     "patch": {
       "automerge": true
+    }
+  }, {
+    "depTypeList": ["devDependencies"],
+    "automerge": true,
+    "major": {
+      "automerge": false
     }
   }]
 }
