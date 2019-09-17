@@ -8,7 +8,12 @@ module.exports = {
         "project": "tsconfig.json",
         "sourceType": "module"
     },
+    "extends": [
+        "prettier",
+        "plugin:prettier/recommended"
+    ],
     "plugins": [
+        "prettier",
         "@typescript-eslint",
         "@typescript-eslint/tslint"
     ],
@@ -17,6 +22,7 @@ module.exports = {
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/ban-types": "error",
         "@typescript-eslint/class-name-casing": "error",
+        "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
         "@typescript-eslint/explicit-member-accessibility": [
             "error",
             {
@@ -26,22 +32,26 @@ module.exports = {
             }
         ],
         "@typescript-eslint/indent": "off",
-        "@typescript-eslint/interface-name-prefix": "error",
+        "@typescript-eslint/interface-name-prefix": ["error", { "prefixWithI": "always" }],
         "@typescript-eslint/member-delimiter-style": "off",
-        "@typescript-eslint/no-angle-bracket-type-assertion": "error",
+        "@typescript-eslint/consistent-type-assertions": [
+            "error", 
+            {
+                assertionStyle: "as",
+                objectLiteralTypeAssertions: "never"
+            }
+        ],
         "@typescript-eslint/no-empty-interface": "error",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-misused-new": "error",
         "@typescript-eslint/no-namespace": "error",
-        "@typescript-eslint/no-object-literal-type-assertion": "error",
         "@typescript-eslint/no-parameter-properties": "off",
         "@typescript-eslint/no-this-alias": "error",
-        "@typescript-eslint/no-triple-slash-reference": "error",
+        "@typescript-eslint/triple-slash-reference": "error",
         "@typescript-eslint/no-use-before-declare": "off",
         "@typescript-eslint/no-var-requires": "error",
         "@typescript-eslint/prefer-for-of": "error",
         "@typescript-eslint/prefer-function-type": "error",
-        "@typescript-eslint/prefer-interface": "error",
         "@typescript-eslint/prefer-namespace-keyword": "error",
         "@typescript-eslint/type-annotation-spacing": "off",
         "@typescript-eslint/unified-signatures": "error",
@@ -70,7 +80,7 @@ module.exports = {
         "no-debugger": "error",
         "no-duplicate-case": "error",
         "no-empty": "error",
-        "no-empty-functions": "error",
+        "no-empty-function": "error",
         "no-extra-bind": "error",
         "no-extra-semi": "off",
         "no-fallthrough": "off",
@@ -89,12 +99,10 @@ module.exports = {
         "no-unused-labels": "error",
         "no-var": "error",
         "object-shorthand": "error",
-        "one-var": "error",
         "prefer-const": "error",
         "prefer-object-spread": "error",
         "quote-props": "off",
         "radix": "error",
-        "some-rule": "error",
         "space-before-function-paren": "off",
         "use-isnan": "error",
         "valid-typeof": "off",
@@ -102,7 +110,7 @@ module.exports = {
             "error",
             {
                 "rulesDirectory": [
-                    "/Users/igor/Documents/__prj/npm-audit-reporter-teamcity/node_modules/tslint-plugin-prettier/rules"
+                    "./node_modules/tslint-plugin-prettier/rules"
                 ],
                 "rules": {
                     "comment-format": [
@@ -152,5 +160,11 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    "overrides": [{
+        "files": [ "src/util.ts"],
+        "rules":  {
+            "no-console": "off"
+        }
+    }]
 };
