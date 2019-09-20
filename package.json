@@ -10,9 +10,8 @@
     "prepublishOnly": "npm test",
     "pretest": "npm run lint",
     "test": "jest --detectOpenHandles",
-    "lint": "npm run tslint",
-    "tslint": "tslint -p tsconfig.json",
-    "eslint": "eslint -c eslintrc.js ./src/**"
+    "lint": "npm run eslint",
+    "eslint": "eslint -c .eslintrc ./src/**"
   },
   "keywords": [
     "teamcity",
