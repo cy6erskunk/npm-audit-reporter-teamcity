@@ -1,5 +1,4 @@
 import { IAuditOutput } from '../../src/reporter';
-// tslint:disable:object-literal-sort-keys
 export const noVulnerabilities: IAuditOutput = {
   actions: [],
   advisories: {},

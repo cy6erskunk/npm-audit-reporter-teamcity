@@ -8,7 +8,6 @@ describe('util', () => {
   it('does not call console in normal mode', () => {
     const mockedLog = jest.spyOn(console, 'log');
     debug('Alert!', 123);
-    // tslint:disable-next-line:no-console
     expect(console.log).not.toHaveBeenCalled();
     mockedLog.mockRestore();
   });
@@ -18,9 +17,7 @@ describe('util', () => {
     const mockedLog = jest.spyOn(console, 'log').mockImplementation();
     process.env.DEBUG = 'true';
     debug(...args);
-    // tslint:disable-next-line:no-console
     expect(console.log).toHaveBeenCalledTimes(1);
-    // tslint:disable-next-line:no-console
     expect(console.log).toHaveBeenCalledWith(...args);
     mockedLog.mockRestore();
   });
