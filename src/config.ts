@@ -1,3 +1,4 @@
+import { join } from 'path';
 import { debug } from './util';
 export interface IConfig {
   inspectionTypeId: string;
@@ -25,7 +26,7 @@ export const CONFIG_FILENAME = 'npm-audit-reporter.conf.json';
 export function getConfig(): IConfig {
   let config: IUserConfig = {};
   try {
-    config = require(`${process.cwd()}/${CONFIG_FILENAME}`);
+    config = require(join(process.cwd(), CONFIG_FILENAME));
   } catch (e) {
     debug('Something went wrong:', e);
     if (e.code !== 'MODULE_NOT_FOUND') {
