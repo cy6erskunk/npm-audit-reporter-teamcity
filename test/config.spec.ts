@@ -1,4 +1,5 @@
 import { CONFIG_FILENAME, defaultConfig, getConfig, IUserConfig } from '../src/config';
+import {join} from 'path';
 
 describe('getConfig', () => {
   it('returns default config by default', () => {
@@ -11,7 +12,7 @@ describe('getConfig', () => {
     const overrideSettings: IUserConfig = {
       inspectionCategory: 'dummy',
     };
-    const mockSettings = jest.mock(`../${CONFIG_FILENAME}`, () => overrideSettings, { virtual: true });
+    const mockSettings = jest.mock(join('..', CONFIG_FILENAME), () => overrideSettings, { virtual: true });
     const config = getConfig();
 
     expect(config.inspectionCategory).toEqual(overrideSettings.inspectionCategory);
