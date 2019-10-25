@@ -46,7 +46,7 @@ jobs:
         ORIGIN=https://${GITHUB_ACTION}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         echo "merging master"
         git fetch $ORIGIN
-        git merge master
+        git merge origin/master
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
