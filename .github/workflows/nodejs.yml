@@ -28,3 +28,36 @@ jobs:
       run: npm test
       env:
         CI: true
+
+  master_and_build:
+    if: github.ref != 'refs/heads/master'
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [macOS-10.14, ubuntu-18.04]
+        node-version: [10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: merge master into PR
+      run: |
+        ORIGIN=https://${GITHUB_ACTION}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        echo "merging master"
+        git fetch $ORIGIN
+        git merge origin/master
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install and build
+      run: |
+        npm install
+        npm run build
+      env:
+        CI: true
+    - name: npm test
+      run: npm test
+      env:
+        CI: true
