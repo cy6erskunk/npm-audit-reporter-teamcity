@@ -36,7 +36,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [macOS-10.14, ubuntu-18.04]
+        os: [macOS-10.14, windows-2016, ubuntu-18.04]
         node-version: [10.x, 12.x]
 
     steps:
@@ -44,9 +44,12 @@ jobs:
     - name: merge master into PR
       run: |
         ORIGIN=https://${GITHUB_ACTION}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        echo "merging master"
         git fetch $ORIGIN
+        echo "merging master"
+        git config user.name "Action User"
+        git config user.email action.user@example.com
         git merge origin/master
+      shell: bash
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
