@@ -113,7 +113,7 @@ export default function reporter(
         name: inspectionName,
       });
 
-      Object.keys(auditResult.advisories).forEach(advisoryId => {
+      Object.keys(auditResult.advisories).forEach((advisoryId) => {
         const advisoryElement = auditResult.advisories[advisoryId];
         debug('current element:', advisoryElement);
         tsm.inspection({
@@ -121,7 +121,7 @@ export default function reporter(
           file: `module: "${advisoryElement.module_name}"`,
           message: `${advisoryElement.overview}
 severity: ${advisoryElement.severity},
-versions: ${advisoryElement.findings.map(f => f.version).join(', ')},
+versions: ${advisoryElement.findings.map((f) => f.version).join(', ')},
 vulnerable_versions: ${advisoryElement.vulnerable_versions},
 patched_versions: ${advisoryElement.patched_versions},
 recommendation: ${advisoryElement.recommendation},
