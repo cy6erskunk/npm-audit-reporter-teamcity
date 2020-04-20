@@ -5,11 +5,11 @@ const tsm = require('teamcity-service-messages');
 
 let input = '';
 
-process.stdin.on('data', data => {
+process.stdin.on('data', (data) => {
   input += data.toString();
 });
 
-process.stdin.on('end', data => {
+process.stdin.on('end', (data) => {
   const reporter = reporterFactory(tsm, getConfig());
   reporter(JSON.parse(input));
 });
