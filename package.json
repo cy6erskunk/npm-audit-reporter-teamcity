@@ -22,7 +22,7 @@
   "author": "Igor Shevchenko",
   "license": "MIT",
   "dependencies": {
-    "teamcity-service-messages": "^0.1.9"
+    "teamcity-service-messages": "0.1.11"
   },
   "devDependencies": {
     "@types/jest": "26.0.5",
