@@ -32,7 +32,7 @@
     "teamcity-service-messages": "0.1.11"
   },
   "devDependencies": {
-    "@types/jest": "26.0.19",
+    "@types/jest": "26.0.20",
     "@types/node": "11.15.43",
     "@typescript-eslint/eslint-plugin": "4.12.0",
     "@typescript-eslint/eslint-plugin-tslint": "4.12.0",
