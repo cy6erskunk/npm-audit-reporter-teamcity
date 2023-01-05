@@ -3,7 +3,7 @@ export type TeamcityServiceMessages = any;
 
 interface IPackage {
   severity: string;
-  fixAvailable: boolean|IVulnerabilityFix;
+  fixAvailable: boolean | IVulnerabilityFix;
   effects: any[];
   nodes: string[];
   name: string;
@@ -35,8 +35,23 @@ interface IVulnerabilities {
 }
 
 export interface IMetadata {
-  vulnerabilities: { high: number; total: number; critical: number; low: number; info: number; moderate: number };
-  dependencies: { total: number; prod: number; dev: number; peer: number; peerOptional: number; optional: number };
+  vulnerabilities: {
+    high: number;
+    total: number;
+    critical: number;
+    low: number;
+    info: number;
+    moderate: number;
+  };
+
+  dependencies: {
+    total: number;
+    prod: number;
+    dev: number;
+    peer: number;
+    peerOptional: number;
+    optional: number;
+  };
 }
 
 export interface IAuditOutput {
