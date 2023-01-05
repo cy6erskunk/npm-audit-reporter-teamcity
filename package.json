@@ -1,12 +1,13 @@
 {
   "name": "npm-audit-teamcity",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "generate TeamCity code inspections from the output of `npm audit`",
   "main": "dist/index.js",
   "bin": "bin/index.js",
   "files": [
     "bin",
     "dist/*.js",
+    "dist/legacy/*.js",
     "package.json",
     "LICENSE",
     "README.md"
