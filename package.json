@@ -1,6 +1,6 @@
 {
-  "name": "npm-audit-reporter-teamcity",
-  "version": "0.3.1",
+  "name": "npm-audit-teamcity",
+  "version": "0.4.1",
   "description": "generate TeamCity code inspections from the output of `npm audit`",
   "main": "dist/index.js",
   "bin": "bin/index.js",
@@ -26,7 +26,7 @@
     "security",
     "audit"
   ],
-  "author": "Igor Shevchenko",
+  "author": "Igor Shevchenko, Michele Preziuso",
   "license": "MIT",
   "dependencies": {
     "teamcity-service-messages": "0.1.14"
@@ -50,6 +50,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cy6erskunk/npm-audit-reporter-teamcity/"
+    "url": "git+https://github.com/mpreziuso/npm-audit-reporter-teamcity/"
   }
 }
