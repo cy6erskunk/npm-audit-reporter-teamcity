@@ -1,6 +1,6 @@
 ## npm audit reporter for TeamCity
-[![Build Status](https://github.com/cy6erskunk/npm-audit-reporter-teamcity/actions/workflows/nodejs.yml/badge.svg)](https://github.com/cy6erskunk/npm-audit-reporter-teamcity/actions/workflows/nodejs.yml)
-[![NPM version](https://img.shields.io/npm/v/npm-audit-reporter-teamcity.svg)](https://www.npmjs.com/package/npm-audit-reporter-teamcity)
+[![Build Status](https://github.com/mpreziuso/npm-audit-teamcity/actions/workflows/nodejs.yml/badge.svg)](https://github.com/cy6erskunk/npm-audit-teamcity/actions/workflows/nodejs.yml)
+[![NPM version](https://img.shields.io/npm/v/npm-audit-teamcity.svg)](https://www.npmjs.com/package/npm-audit-teamcity)
 
 Generates TeamCity inspections from the [npm audit](https://docs.npmjs.com/cli/audit.html) report
 ![Demo report](tc-ui.png)
@@ -8,11 +8,11 @@ Generates TeamCity inspections from the [npm audit](https://docs.npmjs.com/cli/a
 ### Installation
 1. Install packages
 ```
-npm i npm-audit-reporter-teamcity
+npm i npm-audit-teamcity
 ```
 2. Add npm scripts to run checks locally and in a CI server, e.g.:
 ```
-"audit:ci": "npm audit --json|npm-audit-reporter-teamcity"
+"audit:ci": "npm audit --json|npm-audit-teamcity"
 ```
 
 3. Configure build step in TeamCity
