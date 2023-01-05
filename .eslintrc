@@ -194,8 +194,8 @@
         }
     },
     {
-        
-        "files": [ "src/reporter.ts"],
+
+        "files": [ "src/legacy/reporter.ts", "src/reporter.ts"],
         "rules":  {
             "@typescript-eslint/naming-convention": [
                 "error",
