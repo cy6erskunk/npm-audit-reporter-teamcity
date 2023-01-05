@@ -3,7 +3,7 @@ export type TeamcityServiceMessages = any;
 
 interface IPackage {
   severity: string;
-  fixAvailable: boolean|IVulnerabilityFix;
+  fixAvailable: boolean | IVulnerabilityFix;
   effects: any[];
   nodes: string[];
   name: string;
