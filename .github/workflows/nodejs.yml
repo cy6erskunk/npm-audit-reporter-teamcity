@@ -1,6 +1,10 @@
 name: Node CI
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:
@@ -13,47 +17,7 @@ jobs:
         node-version: [14.x, 16.x, 18.x]
 
     steps:
-    - name: configure git
-      run:  git config --global core.autocrlf input
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install and build
-      run: |
-        npm install
-        npm run build
-      env:
-        CI: true
-    - name: npm test
-      run: npm test
-      env:
-        CI: true
-
-  master_and_build:
-    if: github.ref != 'refs/heads/master'
-
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [macOS-11, windows-2022, ubuntu-20.04]
-        node-version: [14.x, 16.x, 18.x]
-
-    steps:
-    - name: configure git
-      run:  git config --global core.autocrlf input
-    - uses: actions/checkout@v1
-    - name: merge master into PR
-      run: |
-        ORIGIN=https://${GITHUB_ACTION}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        git fetch $ORIGIN
-        echo "merging master"
-        git config user.name "Action User"
-        git config user.email action.user@example.com
-        git merge origin/master
-      shell: bash
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
