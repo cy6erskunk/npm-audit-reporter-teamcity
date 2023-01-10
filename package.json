@@ -28,6 +28,13 @@
     "audit"
   ],
   "author": "Igor Shevchenko",
+  "contributors": [
+    {
+      "name": "Michele Preziuso",
+      "email": "mpreziuso@kaosdynamics.com",
+      "url": "https://github.com/mpreziuso"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "teamcity-service-messages": "0.1.14"
