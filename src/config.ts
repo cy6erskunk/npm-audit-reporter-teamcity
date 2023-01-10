@@ -1,17 +1,18 @@
 import { join } from 'path';
+import { InspectionArgs } from 'teamcity-service-messages';
 import { debug } from './util';
 export interface IConfig {
   inspectionTypeId: string;
   inspectionName: string;
   inspectionCategory: string;
-  inspectionSeverity: string;
+  inspectionSeverity: InspectionArgs['SEVERITY'];
 }
 
 export interface IUserConfig {
   inspectionTypeId?: string;
   inspectionName?: string;
   inspectionCategory?: string;
-  inspectionSeverity?: string;
+  inspectionSeverity?: InspectionArgs['SEVERITY'];
 }
 
 export const defaultConfig: IConfig = {

@@ -1,10 +1,9 @@
 type AuditReportVersion = number;
-export type TeamcityServiceMessages = any;
 
 interface IPackage {
   severity: string;
   fixAvailable: boolean | IVulnerabilityFix;
-  effects: any[];
+  effects: string[];
   nodes: string[];
   name: string;
   range: string;

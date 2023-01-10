@@ -1,16 +1,16 @@
+import { API } from 'teamcity-service-messages';
 import { IConfig } from './config';
+import { IAuditLegacyOutput } from './legacy/model';
 import legacyReporter from './legacy/reporter';
 import { IAuditOutput, IMetadata, ISource } from './model';
 import { debug } from './util';
-
-type TeamcityServiceMessages = any;
 
 function isVulnerable(auditMetadata: IMetadata) {
   return auditMetadata.vulnerabilities.total > 0;
 }
 
 export function processReport(
-  tsm: TeamcityServiceMessages,
+  tsm: API<true>,
   { inspectionTypeId, inspectionName, inspectionCategory, inspectionSeverity }: IConfig,
   auditResult: IAuditOutput,
 ) {
@@ -57,9 +57,9 @@ advisory: ${advisory.url}`,
   });
 }
 
-export default function reporter(tsm: TeamcityServiceMessages, cfg: IConfig) {
-  return (auditResult: any) =>
+export default function reporter(tsm: API<true>, cfg: IConfig) {
+  return (auditResult: IAuditOutput | IAuditLegacyOutput) =>
     auditResult.hasOwnProperty('auditReportVersion')
-      ? processReport(tsm, cfg, auditResult)
-      : legacyReporter(tsm, cfg, auditResult);
+      ? processReport(tsm, cfg, auditResult as IAuditOutput)
+      : legacyReporter(tsm, cfg, auditResult as IAuditLegacyOutput);
 }
