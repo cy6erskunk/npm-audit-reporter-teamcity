@@ -1,12 +1,12 @@
+import { defaultConfig } from "../src/config";
+import { processReport } from "../src/reporter";
+
+import { multipleVulnerabilities, noVulnerability, simpleVulnerability } from "./mocks/index";
+
 const tsm = {
   inspection: jest.fn(),
   inspectionType: jest.fn(),
 };
-
-import { defaultConfig } from '../src/config';
-import reporterFactory from '../src/reporter';
-
-import { multipleVulnerabilities, noVulnerabilities } from './mocks/';
 
 describe('npm audit teamcity reporter', () => {
   beforeEach(() => {
@@ -14,31 +14,29 @@ describe('npm audit teamcity reporter', () => {
     tsm.inspection.mockReset();
   });
 
-  test('a couple of vulnerabilities found', () => {
-    reporterFactory(tsm, defaultConfig)(multipleVulnerabilities);
+  test('one vulnerability found', () => {
+    processReport(tsm, defaultConfig, simpleVulnerability);
     expect(tsm.inspectionType).toHaveBeenCalledTimes(1);
-    expect(tsm.inspection).toHaveBeenCalledTimes(9);
+    expect(tsm.inspection).toHaveBeenCalledTimes(1);
   });
 
   test('no vulnerabilities found', () => {
-    reporterFactory(tsm, defaultConfig)(noVulnerabilities);
+    processReport(tsm, defaultConfig, noVulnerability);
     expect(tsm.inspectionType).not.toHaveBeenCalled();
     expect(tsm.inspection).not.toHaveBeenCalled();
   });
 
   test('output matches snapshot with some vulnerabilities', () => {
-    const output = reporterFactory(tsm, defaultConfig)(multipleVulnerabilities);
+    processReport(tsm, defaultConfig, multipleVulnerabilities);
     expect(tsm.inspection).toHaveBeenLastCalledWith({
       SEVERITY: defaultConfig.inspectionSeverity,
-      file: 'module: "js-yaml"',
-      message: `Versions \`js-yaml\` prior to 3.13.0 are vulnerable to Denial of Service. By parsing a carefully-crafted YAML file, the node process stalls and may exhaust system resources leading to a Denial of Service.
+      file: 'module: "video.js"',
+      message: `Cross-site Scripting in video.js
 severity: moderate,
-versions: 3.12.0,
-dependency of: eslint, jest,
-vulnerable_versions: <3.13.0,
-patched_versions: >=3.13.0,
-recommendation: Upgrade to version 3.13.0.,
-advisory: https://npmjs.com/advisories/788`,
+versions: <7.14.3,
+dependency of: n/a,
+patched_versions: video.js@7.20.3,
+advisory: https://github.com/advisories/GHSA-pp7m-6j83-m7r6`,
         typeId: defaultConfig.inspectionTypeId,
     });
   });

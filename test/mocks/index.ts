@@ -1,6778 +1,1118 @@
-import { IAuditOutput } from '../../src/reporter';
-export const noVulnerabilities: IAuditOutput = {
-  actions: [],
-  advisories: {},
-  muted: [],
-  metadata: {
-    vulnerabilities: {
-      info: 0,
-      low: 0,
-      moderate: 0,
-      high: 0,
-      critical: 0,
-    },
-    dependencies: 0,
-    devDependencies: 0,
-    optionalDependencies: 0,
-    totalDependencies: 0,
-  },
-  runId: '63eaff98-07e8-4707-b739-da2c4b7ced94',
+/* eslint-disable */
+// @ts-nocheck
+
+import {IAuditOutput} from "../../src/model";
+
+export const noVulnerability: IAuditOutput = {
+    "auditReportVersion": 2,
+    "vulnerabilities": {},
+    "metadata": {
+        "vulnerabilities": {
+            "info": 0,
+            "low": 0,
+            "moderate": 0,
+            "high": 0,
+            "critical": 0,
+            "total": 0
+        },
+        "dependencies": {
+            "prod": 20,
+            "dev": 1113,
+            "optional": 1,
+            "peer": 0,
+            "peerOptional": 0,
+            "total": 1132
+        }
+    }
 };
 
-export const multipleVulnerabilities: IAuditOutput = {
-  actions: [
-    {
-      action: 'install',
-      module: 'jest',
-      target: '24.5.0',
-      isMajor: true,
-      resolves: [
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>test-exclude>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-config>jest-environment-jsdom>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-config>jest-environment-node>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>expect>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>jest-snapshot>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-config>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-config>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-environment-jsdom>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-haste-map>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-resolve-dependencies>jest-snapshot>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>test-exclude>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>jest-environment-jsdom>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>jest-environment-node>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>expect>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>jest-snapshot>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-config>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>expect>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>jest-snapshot>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>test-exclude>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>test-exclude>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-environment-jsdom>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-environment-node>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>expect>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-snapshot>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runner>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>babel-plugin-istanbul>test-exclude>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>test-exclude>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>jest-environment-jsdom>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>jest-environment-node>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>expect>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>jest-config>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>jest-snapshot>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-runtime>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-snapshot>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>jest-util>jest-message-util>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 786,
-          path: 'jest>jest-cli>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-haste-map>sane>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path:
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-haste-map>sane>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-haste-map>sane>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-haste-map>sane>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-haste-map>sane>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>async>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>istanbul-reports>handlebars>async>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-resolve-dependencies>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-runtime>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'jest>jest-cli>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-resolve-dependencies>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-jasmine2>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-register>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>babel-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'jest>jest-cli>jest-runtime>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-runtime>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'jest>jest-cli>jest-snapshot>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 788,
-          path: 'jest>jest-cli>istanbul-api>js-yaml',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 755,
-          path: 'jest>jest-cli>istanbul-api>istanbul-reports>handlebars',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 722,
-          path: 'jest>jest-cli>jest-haste-map>sane>exec-sh>merge',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 722,
-          path: 'jest>jest-cli>jest-haste-map>sane>watch>exec-sh>merge',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 722,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>exec-sh>merge',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 722,
-          path: 'jest>jest-cli>jest-runner>jest-haste-map>sane>watch>exec-sh>merge',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 722,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>exec-sh>merge',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 722,
-          path: 'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>watch>exec-sh>merge',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 722,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>exec-sh>merge',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 722,
-          path: 'jest>jest-cli>jest-runtime>jest-haste-map>sane>watch>exec-sh>merge',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
+export const simpleVulnerability: IAuditOutput = {
+    "auditReportVersion": 2,
+    "vulnerabilities": {
+        "json5": {
+            "name": "json5",
+            "severity": "high",
+            "isDirect": false,
+            "via": [
+                {
+                    "source": 1085311,
+                    "name": "json5",
+                    "dependency": "json5",
+                    "title": "Prototype Pollution in JSON5 via Parse Method",
+                    "url": "https://github.com/advisories/GHSA-9c47-m6qq-7p4h",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-1321"
+                    ],
+                    "cvss": {
+                        "score": 7.1,
+                        "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:H"
+                    },
+                    "range": "<1.0.2"
+                }
+            ],
+            "effects": [],
+            "range": "<1.0.2 || >=2.0.0 <2.2.2",
+            "nodes": [
+                "node_modules/json5",
+                "node_modules/tsconfig-paths/node_modules/json5"
+            ],
+            "fixAvailable": true
+        }
     },
-    {
-      module: '@babel/preset-env',
-      resolves: [
-        {
-          id: 782,
-          path: '@babel/preset-env>@babel/helper-module-imports>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-annotate-as-pure>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-module-imports>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-annotate-as-pure>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-annotate-as-pure>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-define-map>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-define-map>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-define-map>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-optimise-call-expression>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/helper-member-expression-to-functions>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/helper-optimise-call-expression>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-exponentiation-operator>@babel/helper-builder-binary-assignment-operator-visitor>@babel/helper-explode-assignable-expression>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-exponentiation-operator>@babel/helper-builder-binary-assignment-operator-visitor>@babel/helper-explode-assignable-expression>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-exponentiation-operator>@babel/helper-builder-binary-assignment-operator-visitor>@babel/helper-explode-assignable-expression>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-exponentiation-operator>@babel/helper-builder-binary-assignment-operator-visitor>@babel/helper-explode-assignable-expression>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-exponentiation-operator>@babel/helper-builder-binary-assignment-operator-visitor>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-function-name>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-function-name>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-amd>@babel/helper-module-transforms>@babel/helper-module-imports>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-amd>@babel/helper-module-transforms>@babel/helper-simple-access>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-amd>@babel/helper-module-transforms>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-commonjs>@babel/helper-module-transforms>@babel/helper-module-imports>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-commonjs>@babel/helper-module-transforms>@babel/helper-simple-access>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-commonjs>@babel/helper-module-transforms>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-commonjs>@babel/helper-simple-access>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-systemjs>@babel/helper-hoist-variables>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-umd>@babel/helper-module-transforms>@babel/helper-module-imports>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-umd>@babel/helper-module-transforms>@babel/helper-simple-access>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-modules-umd>@babel/helper-module-transforms>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/helper-member-expression-to-functions>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/helper-optimise-call-expression>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-call-delegate>@babel/helper-hoist-variables>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-call-delegate>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-call-delegate>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-call-delegate>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-call-delegate>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/preset-env>@babel/plugin-transform-template-literals>@babel/helper-annotate-as-pure>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      target: '7.4.2',
-      action: 'install',
-      isMajor: false,
+    "metadata": {
+        "vulnerabilities": {
+            "info": 0,
+            "low": 0,
+            "moderate": 0,
+            "high": 1,
+            "critical": 0,
+            "total": 1
+        },
+        "dependencies": {
+            "prod": 20,
+            "dev": 1113,
+            "optional": 1,
+            "peer": 0,
+            "peerOptional": 0,
+            "total": 1132
+        }
+    }
+}
+
+export const multipleVulnerabilities = {
+    "auditReportVersion": 2,
+    "vulnerabilities": {
+        "anymatch": {
+            "name": "anymatch",
+            "severity": "low",
+            "isDirect": false,
+            "via": [
+                "micromatch"
+            ],
+            "effects": [
+                "chokidar"
+            ],
+            "range": "1.2.0 - 1.3.2",
+            "nodes": [
+                "node_modules/anymatch"
+            ],
+            "fixAvailable": true
+        },
+        "babel-core": {
+            "name": "babel-core",
+            "severity": "high",
+            "isDirect": false,
+            "via": [
+                "babel-plugin-proto-to-assign",
+                "json5",
+                "lodash",
+                "minimatch"
+            ],
+            "effects": [
+                "grunt-babel"
+            ],
+            "range": "<=7.0.0-beta.3",
+            "nodes": [
+                "node_modules/babel-core"
+            ],
+            "fixAvailable": {
+                "name": "grunt-babel",
+                "version": "8.0.0",
+                "isSemVerMajor": true
+            }
+        },
+        "babel-plugin-proto-to-assign": {
+            "name": "babel-plugin-proto-to-assign",
+            "severity": "moderate",
+            "isDirect": false,
+            "via": [
+                "lodash"
+            ],
+            "effects": [
+                "babel-core"
+            ],
+            "range": "*",
+            "nodes": [
+                "node_modules/babel-plugin-proto-to-assign"
+            ],
+            "fixAvailable": {
+                "name": "grunt-babel",
+                "version": "8.0.0",
+                "isSemVerMajor": true
+            }
+        },
+        "braces": {
+            "name": "braces",
+            "severity": "low",
+            "isDirect": false,
+            "via": [
+                {
+                    "source": 1069589,
+                    "name": "braces",
+                    "dependency": "braces",
+                    "title": "Regular Expression Denial of Service in braces",
+                    "url": "https://github.com/advisories/GHSA-g95f-p29q-9xw4",
+                    "severity": "low",
+                    "cwe": [
+                        "CWE-185",
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 3.7,
+                        "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                    },
+                    "range": "<2.3.1"
+                },
+                {
+                    "source": 1082316,
+                    "name": "braces",
+                    "dependency": "braces",
+                    "title": "Regular Expression Denial of Service (ReDoS) in braces",
+                    "url": "https://github.com/advisories/GHSA-cwfw-4gq5-mrqx",
+                    "severity": "low",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 0,
+                        "vectorString": null
+                    },
+                    "range": "<2.3.1"
+                }
+            ],
+            "effects": [
+                "micromatch"
+            ],
+            "range": "<=2.3.0",
+            "nodes": [
+                "node_modules/braces"
+            ],
+            "fixAvailable": true
+        },
+        "chokidar": {
+            "name": "chokidar",
+            "severity": "high",
+            "isDirect": false,
+            "via": [
+                "anymatch",
+                "glob-parent"
+            ],
+            "effects": [
+                "qunit"
+            ],
+            "range": "1.0.0-rc1 - 2.1.8",
+            "nodes": [
+                "node_modules/chokidar"
+            ],
+            "fixAvailable": true
+        },
+        "decode-uri-component": {
+            "name": "decode-uri-component",
+            "severity": "low",
+            "isDirect": false,
+            "via": [
+                {
+                    "source": 1085062,
+                    "name": "decode-uri-component",
+                    "dependency": "decode-uri-component",
+                    "title": "decode-uri-component vulnerable to Denial of Service (DoS)",
+                    "url": "https://github.com/advisories/GHSA-w573-4hg7-7wgq",
+                    "severity": "low",
+                    "cwe": [
+                        "CWE-20"
+                    ],
+                    "cvss": {
+                        "score": 0,
+                        "vectorString": null
+                    },
+                    "range": "<0.2.1"
+                }
+            ],
+            "effects": [],
+            "range": "<0.2.1",
+            "nodes": [
+                "node_modules/decode-uri-component"
+            ],
+            "fixAvailable": true
+        },
+        "engine.io": {
+            "name": "engine.io",
+            "severity": "moderate",
+            "isDirect": false,
+            "via": [
+                {
+                    "source": 1085165,
+                    "name": "engine.io",
+                    "dependency": "engine.io",
+                    "title": "Uncaught exception in engine.io",
+                    "url": "https://github.com/advisories/GHSA-r7qp-cfhv-p84w",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-248"
+                    ],
+                    "cvss": {
+                        "score": 6.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+                    },
+                    "range": "<3.6.1"
+                }
+            ],
+            "effects": [],
+            "range": "<3.6.1",
+            "nodes": [
+                "node_modules/engine.io"
+            ],
+            "fixAvailable": true
+        },
+        "findup-sync": {
+            "name": "findup-sync",
+            "severity": "low",
+            "isDirect": false,
+            "via": [
+                "micromatch"
+            ],
+            "effects": [
+                "qunit"
+            ],
+            "range": "0.4.0 - 1.0.0",
+            "nodes": [
+                "node_modules/qunit/node_modules/findup-sync"
+            ],
+            "fixAvailable": true
+        },
+        "glob-base": {
+            "name": "glob-base",
+            "severity": "high",
+            "isDirect": false,
+            "via": [
+                "glob-parent"
+            ],
+            "effects": [
+                "parse-glob"
+            ],
+            "range": "*",
+            "nodes": [
+                "node_modules/glob-base"
+            ],
+            "fixAvailable": true
+        },
+        "glob-parent": {
+            "name": "glob-parent",
+            "severity": "high",
+            "isDirect": false,
+            "via": [
+                {
+                    "source": 1081884,
+                    "name": "glob-parent",
+                    "dependency": "glob-parent",
+                    "title": "glob-parent before 5.1.2 vulnerable to Regular Expression Denial of Service in enclosure regex",
+                    "url": "https://github.com/advisories/GHSA-ww39-953v-wcq6",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 7.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    },
+                    "range": "<5.1.2"
+                }
+            ],
+            "effects": [
+                "chokidar",
+                "glob-base"
+            ],
+            "range": "<5.1.2",
+            "nodes": [
+                "node_modules/glob-parent"
+            ],
+            "fixAvailable": true
+        },
+        "grunt-babel": {
+            "name": "grunt-babel",
+            "severity": "high",
+            "isDirect": true,
+            "via": [
+                "babel-core"
+            ],
+            "effects": [],
+            "range": "5.0.0 - 5.0.3",
+            "nodes": [
+                "node_modules/grunt-babel"
+            ],
+            "fixAvailable": {
+                "name": "grunt-babel",
+                "version": "8.0.0",
+                "isSemVerMajor": true
+            }
+        },
+        "jquery-ui": {
+            "name": "jquery-ui",
+            "severity": "moderate",
+            "isDirect": true,
+            "via": [
+                {
+                    "source": 1084889,
+                    "name": "jquery-ui",
+                    "dependency": "jquery-ui",
+                    "title": "XSS in `*Text` options of the Datepicker widget in jquery-ui",
+                    "url": "https://github.com/advisories/GHSA-j7qv-pgf6-hvh4",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-79"
+                    ],
+                    "cvss": {
+                        "score": 6.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+                    },
+                    "range": "<1.13.0"
+                },
+                {
+                    "source": 1084890,
+                    "name": "jquery-ui",
+                    "dependency": "jquery-ui",
+                    "title": "XSS in the `of` option of the `.position()` util in jquery-ui",
+                    "url": "https://github.com/advisories/GHSA-gpqq-952q-5327",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-79"
+                    ],
+                    "cvss": {
+                        "score": 6.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+                    },
+                    "range": "<1.13.0"
+                },
+                {
+                    "source": 1084891,
+                    "name": "jquery-ui",
+                    "dependency": "jquery-ui",
+                    "title": "XSS in the `altField` option of the Datepicker widget in jquery-ui",
+                    "url": "https://github.com/advisories/GHSA-9gj3-hwp5-pmwc",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-79"
+                    ],
+                    "cvss": {
+                        "score": 6.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+                    },
+                    "range": "<1.13.0"
+                },
+                {
+                    "source": 1084892,
+                    "name": "jquery-ui",
+                    "dependency": "jquery-ui",
+                    "title": "XSS in dialog closeText in jquery-ui",
+                    "url": "https://github.com/advisories/GHSA-hpcf-8vf9-q4gj",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-79"
+                    ],
+                    "cvss": {
+                        "score": 6.1,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                    },
+                    "range": "<1.12.0"
+                },
+                {
+                    "source": 1085153,
+                    "name": "jquery-ui",
+                    "dependency": "jquery-ui",
+                    "title": "jQuery UI vulnerable to XSS when refreshing a checkboxradio with an HTML-like initial text label",
+                    "url": "https://github.com/advisories/GHSA-h6gj-6jjq-h8g9",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-79"
+                    ],
+                    "cvss": {
+                        "score": 6.1,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                    },
+                    "range": "<1.13.2"
+                }
+            ],
+            "effects": [],
+            "range": "<=1.13.1",
+            "nodes": [
+                "node_modules/jquery-ui"
+            ],
+            "fixAvailable": {
+                "name": "jquery-ui",
+                "version": "1.13.2",
+                "isSemVerMajor": false
+            }
+        },
+        "json5": {
+            "name": "json5",
+            "severity": "high",
+            "isDirect": false,
+            "via": [
+                {
+                    "source": 1085311,
+                    "name": "json5",
+                    "dependency": "json5",
+                    "title": "Prototype Pollution in JSON5 via Parse Method",
+                    "url": "https://github.com/advisories/GHSA-9c47-m6qq-7p4h",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-1321"
+                    ],
+                    "cvss": {
+                        "score": 7.1,
+                        "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:H"
+                    },
+                    "range": "<1.0.2"
+                }
+            ],
+            "effects": [
+                "babel-core"
+            ],
+            "range": "<1.0.2",
+            "nodes": [
+                "node_modules/json5"
+            ],
+            "fixAvailable": {
+                "name": "grunt-babel",
+                "version": "8.0.0",
+                "isSemVerMajor": true
+            }
+        },
+        "lodash": {
+            "name": "lodash",
+            "severity": "critical",
+            "isDirect": false,
+            "via": [
+                {
+                    "source": 1069477,
+                    "name": "lodash",
+                    "dependency": "lodash",
+                    "title": "Prototype Pollution in lodash",
+                    "url": "https://github.com/advisories/GHSA-jf85-cpcp-j695",
+                    "severity": "critical",
+                    "cwe": [
+                        "CWE-20"
+                    ],
+                    "cvss": {
+                        "score": 9.1,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+                    },
+                    "range": "<4.17.12"
+                },
+                {
+                    "source": 1070197,
+                    "name": "lodash",
+                    "dependency": "lodash",
+                    "title": "Regular Expression Denial of Service (ReDoS) in lodash",
+                    "url": "https://github.com/advisories/GHSA-x5rq-j2xg-h7qm",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 0,
+                        "vectorString": null
+                    },
+                    "range": "<4.17.11"
+                },
+                {
+                    "source": 1070247,
+                    "name": "lodash",
+                    "dependency": "lodash",
+                    "title": "Prototype Pollution in lodash",
+                    "url": "https://github.com/advisories/GHSA-p6mc-m468-83gw",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-770",
+                        "CWE-1321"
+                    ],
+                    "cvss": {
+                        "score": 7.4,
+                        "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H"
+                    },
+                    "range": "<4.17.20"
+                },
+                {
+                    "source": 1083025,
+                    "name": "lodash",
+                    "dependency": "lodash",
+                    "title": "Prototype Pollution in lodash",
+                    "url": "https://github.com/advisories/GHSA-4xc9-xhrj-v574",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 0,
+                        "vectorString": null
+                    },
+                    "range": "<4.17.11"
+                },
+                {
+                    "source": 1083054,
+                    "name": "lodash",
+                    "dependency": "lodash",
+                    "title": "Prototype Pollution in lodash",
+                    "url": "https://github.com/advisories/GHSA-fvqr-27wr-82fm",
+                    "severity": "low",
+                    "cwe": [
+                        "CWE-471"
+                    ],
+                    "cvss": {
+                        "score": 0,
+                        "vectorString": null
+                    },
+                    "range": "<4.17.5"
+                },
+                {
+                    "source": 1084491,
+                    "name": "lodash",
+                    "dependency": "lodash",
+                    "title": "Command Injection in lodash",
+                    "url": "https://github.com/advisories/GHSA-35jh-r3h4-6jhm",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-77",
+                        "CWE-94"
+                    ],
+                    "cvss": {
+                        "score": 7.2,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    "range": "<4.17.21"
+                },
+                {
+                    "source": 1084498,
+                    "name": "lodash",
+                    "dependency": "lodash",
+                    "title": "Regular Expression Denial of Service (ReDoS) in lodash",
+                    "url": "https://github.com/advisories/GHSA-29mw-wpgm-hmr9",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 5.3,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                    },
+                    "range": "<4.17.21"
+                }
+            ],
+            "effects": [
+                "babel-core",
+                "babel-plugin-proto-to-assign"
+            ],
+            "range": "<=4.17.20",
+            "nodes": [
+                "node_modules/lodash"
+            ],
+            "fixAvailable": {
+                "name": "grunt-babel",
+                "version": "8.0.0",
+                "isSemVerMajor": true
+            }
+        },
+        "markdown-it": {
+            "name": "markdown-it",
+            "severity": "moderate",
+            "isDirect": false,
+            "via": [
+                {
+                    "source": 1070030,
+                    "name": "markdown-it",
+                    "dependency": "markdown-it",
+                    "title": "Uncontrolled Resource Consumption in markdown-it",
+                    "url": "https://github.com/advisories/GHSA-6vfc-qv3f-vr6c",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 5.3,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                    },
+                    "range": "<12.3.2"
+                }
+            ],
+            "effects": [
+                "modernizr"
+            ],
+            "range": "<12.3.2",
+            "nodes": [
+                "node_modules/markdown-it"
+            ],
+            "fixAvailable": {
+                "name": "modernizr",
+                "version": "3.12.0",
+                "isSemVerMajor": false
+            }
+        },
+        "micromatch": {
+            "name": "micromatch",
+            "severity": "high",
+            "isDirect": false,
+            "via": [
+                "braces",
+                "parse-glob"
+            ],
+            "effects": [
+                "anymatch",
+                "findup-sync"
+            ],
+            "range": "0.2.0 - 2.3.11",
+            "nodes": [
+                "node_modules/micromatch"
+            ],
+            "fixAvailable": true
+        },
+        "minimatch": {
+            "name": "minimatch",
+            "severity": "high",
+            "isDirect": false,
+            "via": [
+                {
+                    "source": 1083108,
+                    "name": "minimatch",
+                    "dependency": "minimatch",
+                    "title": "Regular Expression Denial of Service in minimatch",
+                    "url": "https://github.com/advisories/GHSA-hxm2-r34f-qmc5",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 7.5,
+                        "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    },
+                    "range": "<3.0.2"
+                },
+                {
+                    "source": 1084765,
+                    "name": "minimatch",
+                    "dependency": "minimatch",
+                    "title": "minimatch ReDoS vulnerability",
+                    "url": "https://github.com/advisories/GHSA-f8q6-p94x-37v3",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 7.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    },
+                    "range": "<3.0.5"
+                }
+            ],
+            "effects": [
+                "babel-core"
+            ],
+            "range": "<=3.0.4",
+            "nodes": [
+                "node_modules/babel-core/node_modules/minimatch"
+            ],
+            "fixAvailable": {
+                "name": "grunt-babel",
+                "version": "8.0.0",
+                "isSemVerMajor": true
+            }
+        },
+        "modernizr": {
+            "name": "modernizr",
+            "severity": "moderate",
+            "isDirect": true,
+            "via": [
+                "markdown-it"
+            ],
+            "effects": [],
+            "range": "3.7.1 - 3.11.8",
+            "nodes": [
+                "node_modules/modernizr"
+            ],
+            "fixAvailable": {
+                "name": "modernizr",
+                "version": "3.12.0",
+                "isSemVerMajor": false
+            }
+        },
+        "moment": {
+            "name": "moment",
+            "severity": "high",
+            "isDirect": true,
+            "via": [
+                {
+                    "source": 1069917,
+                    "name": "moment",
+                    "dependency": "moment",
+                    "title": "Regular Expression Denial of Service in moment",
+                    "url": "https://github.com/advisories/GHSA-446m-mv8f-q348",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 7.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    },
+                    "range": "<2.19.3"
+                },
+                {
+                    "source": 1070472,
+                    "name": "moment",
+                    "dependency": "moment",
+                    "title": "Regular Expression Denial of Service in moment",
+                    "url": "https://github.com/advisories/GHSA-87vv-r9j6-g5qv",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 6.5,
+                        "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+                    },
+                    "range": "<2.11.2"
+                },
+                {
+                    "source": 1081763,
+                    "name": "moment",
+                    "dependency": "moment",
+                    "title": "Path Traversal: 'dir/../../filename' in moment.locale",
+                    "url": "https://github.com/advisories/GHSA-8hfj-j24r-96c4",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-22",
+                        "CWE-27"
+                    ],
+                    "cvss": {
+                        "score": 7.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                    },
+                    "range": "<2.29.2"
+                }
+            ],
+            "effects": [],
+            "range": "<=2.29.1",
+            "nodes": [
+                "node_modules/moment"
+            ],
+            "fixAvailable": {
+                "name": "moment",
+                "version": "2.29.4",
+                "isSemVerMajor": false
+            }
+        },
+        "parse-glob": {
+            "name": "parse-glob",
+            "severity": "high",
+            "isDirect": false,
+            "via": [
+                "glob-base"
+            ],
+            "effects": [
+                "micromatch"
+            ],
+            "range": ">=2.1.0",
+            "nodes": [
+                "node_modules/parse-glob"
+            ],
+            "fixAvailable": true
+        },
+        "plupload": {
+            "name": "plupload",
+            "severity": "moderate",
+            "isDirect": true,
+            "via": [
+                {
+                    "source": 1067501,
+                    "name": "plupload",
+                    "dependency": "plupload",
+                    "title": "Code injection in plupload",
+                    "url": "https://github.com/advisories/GHSA-rp2c-jrgp-cvr8",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-75",
+                        "CWE-434"
+                    ],
+                    "cvss": {
+                        "score": 4.2,
+                        "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N"
+                    },
+                    "range": "<2.3.9"
+                }
+            ],
+            "effects": [],
+            "range": "<2.3.9",
+            "nodes": [
+                "node_modules/plupload"
+            ],
+            "fixAvailable": {
+                "name": "plupload",
+                "version": "2.3.9",
+                "isSemVerMajor": false
+            }
+        },
+        "prismjs": {
+            "name": "prismjs",
+            "severity": "high",
+            "isDirect": true,
+            "via": [
+                {
+                    "source": 1067401,
+                    "name": "prismjs",
+                    "dependency": "prismjs",
+                    "title": "Cross-site Scripting in Prism",
+                    "url": "https://github.com/advisories/GHSA-3949-f494-cm99",
+                    "severity": "high",
+                    "cwe": [
+                        "CWE-79"
+                    ],
+                    "cvss": {
+                        "score": 7.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:L"
+                    },
+                    "range": ">=1.14.0 <1.27.0"
+                },
+                {
+                    "source": 1081996,
+                    "name": "prismjs",
+                    "dependency": "prismjs",
+                    "title": "prismjs Regular Expression Denial of Service vulnerability",
+                    "url": "https://github.com/advisories/GHSA-hqhp-5p83-hx96",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-400"
+                    ],
+                    "cvss": {
+                        "score": 6.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                    },
+                    "range": "<1.25.0"
+                }
+            ],
+            "effects": [],
+            "range": "<=1.26.0",
+            "nodes": [
+                "node_modules/prismjs"
+            ],
+            "fixAvailable": {
+                "name": "prismjs",
+                "version": "1.29.0",
+                "isSemVerMajor": false
+            }
+        },
+        "qunit": {
+            "name": "qunit",
+            "severity": "high",
+            "isDirect": true,
+            "via": [
+                "chokidar",
+                "findup-sync"
+            ],
+            "effects": [],
+            "range": "2.4.1 - 2.6.1",
+            "nodes": [
+                "node_modules/qunit"
+            ],
+            "fixAvailable": true
+        },
+        "socket.io-parser": {
+            "name": "socket.io-parser",
+            "severity": "critical",
+            "isDirect": false,
+            "via": [
+                {
+                    "source": 1085041,
+                    "name": "socket.io-parser",
+                    "dependency": "socket.io-parser",
+                    "title": "Insufficient validation when decoding a Socket.IO packet",
+                    "url": "https://github.com/advisories/GHSA-qm95-pgcg-qqfq",
+                    "severity": "critical",
+                    "cwe": [
+                        "CWE-20",
+                        "CWE-1287"
+                    ],
+                    "cvss": {
+                        "score": 9.8,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    "range": ">=3.4.0 <3.4.2"
+                },
+                {
+                    "source": 1085042,
+                    "name": "socket.io-parser",
+                    "dependency": "socket.io-parser",
+                    "title": "Insufficient validation when decoding a Socket.IO packet",
+                    "url": "https://github.com/advisories/GHSA-qm95-pgcg-qqfq",
+                    "severity": "critical",
+                    "cwe": [
+                        "CWE-20",
+                        "CWE-1287"
+                    ],
+                    "cvss": {
+                        "score": 9.8,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    "range": "<3.3.3"
+                }
+            ],
+            "effects": [],
+            "range": ">=3.4.0 <3.4.2 || <3.3.3",
+            "nodes": [
+                "node_modules/socket.io-client/node_modules/socket.io-parser",
+                "node_modules/socket.io-parser"
+            ],
+            "fixAvailable": true
+        },
+        "tinymce": {
+            "name": "tinymce",
+            "severity": "moderate",
+            "isDirect": true,
+            "via": [
+                {
+                    "source": 1067561,
+                    "name": "tinymce",
+                    "dependency": "tinymce",
+                    "title": "Cross-site scripting vulnerability in TinyMCE plugins",
+                    "url": "https://github.com/advisories/GHSA-r8hm-w5f7-wj39",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-64",
+                        "CWE-79"
+                    ],
+                    "cvss": {
+                        "score": 6.1,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                    },
+                    "range": "<5.10.0"
+                },
+                {
+                    "source": 1067575,
+                    "name": "tinymce",
+                    "dependency": "tinymce",
+                    "title": "Cross-site scripting vulnerability in TinyMCE",
+                    "url": "https://github.com/advisories/GHSA-5h9g-x5rv-25wg",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-79"
+                    ],
+                    "cvss": {
+                        "score": 6.1,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                    },
+                    "range": "<5.9.0"
+                },
+                {
+                    "source": 1085198,
+                    "name": "tinymce",
+                    "dependency": "tinymce",
+                    "title": "Cross-site scripting vulnerability in TinyMCE alerts",
+                    "url": "https://github.com/advisories/GHSA-gg8r-xjwq-4w92",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-79"
+                    ],
+                    "cvss": {
+                        "score": 5.4,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+                    },
+                    "range": "<5.10.7"
+                }
+            ],
+            "effects": [],
+            "range": "<=5.10.6",
+            "nodes": [
+                "node_modules/tinymce"
+            ],
+            "fixAvailable": {
+                "name": "tinymce",
+                "version": "5.10.7",
+                "isSemVerMajor": false
+            }
+        },
+        "underscore": {
+            "name": "underscore",
+            "severity": "critical",
+            "isDirect": true,
+            "via": [
+                {
+                    "source": 1084602,
+                    "name": "underscore",
+                    "dependency": "underscore",
+                    "title": "Arbitrary Code Execution in underscore",
+                    "url": "https://github.com/advisories/GHSA-cf4h-3jhx-xvhq",
+                    "severity": "critical",
+                    "cwe": [
+                        "CWE-94"
+                    ],
+                    "cvss": {
+                        "score": 9.8,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    },
+                    "range": ">=1.3.2 <1.12.1"
+                }
+            ],
+            "effects": [],
+            "range": "1.3.2 - 1.12.0",
+            "nodes": [
+                "node_modules/underscore"
+            ],
+            "fixAvailable": {
+                "name": "underscore",
+                "version": "1.13.6",
+                "isSemVerMajor": false
+            }
+        },
+        "video.js": {
+            "name": "video.js",
+            "severity": "moderate",
+            "isDirect": true,
+            "via": [
+                {
+                    "source": 1085152,
+                    "name": "video.js",
+                    "dependency": "video.js",
+                    "title": "Cross-site Scripting in video.js",
+                    "url": "https://github.com/advisories/GHSA-pp7m-6j83-m7r6",
+                    "severity": "moderate",
+                    "cwe": [
+                        "CWE-79"
+                    ],
+                    "cvss": {
+                        "score": 6.5,
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                    },
+                    "range": "<7.14.3"
+                }
+            ],
+            "effects": [],
+            "range": "<7.14.3",
+            "nodes": [
+                "node_modules/video.js"
+            ],
+            "fixAvailable": {
+                "name": "video.js",
+                "version": "7.20.3",
+                "isSemVerMajor": true
+            }
+        }
     },
-    {
-      action: 'install',
-      module: 'webpack-dev-server',
-      target: '3.2.1',
-      isMajor: false,
-      resolves: [
-        {
-          id: 725,
-          path: 'webpack-dev-server',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>chokidar>anymatch>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>chokidar>anymatch>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>chokidar>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>chokidar>anymatch>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>chokidar>anymatch>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>chokidar>anymatch>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>chokidar>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>http-proxy-middleware>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>http-proxy-middleware>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>http-proxy-middleware>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>http-proxy-middleware>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>http-proxy-middleware>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>http-proxy-middleware>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>portfinder>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>spdy>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack-dev-server>spdy>spdy-transport>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack-dev-server>chokidar>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'webpack-dev-server>chokidar>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack-dev-server>chokidar>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack-dev-server>chokidar>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack-dev-server>chokidar>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack-dev-server>chokidar>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack-dev-server>http-proxy-middleware>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'webpack-dev-server>http-proxy-middleware>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack-dev-server>http-proxy-middleware>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack-dev-server>http-proxy-middleware>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack-dev-server>http-proxy-middleware>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'webpack-dev-server>http-proxy-middleware>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-    },
-    {
-      module: 'webpack',
-      resolves: [
-        {
-          id: 534,
-          path: 'webpack>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>watchpack>chokidar>anymatch>micromatch>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>watchpack>chokidar>anymatch>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>watchpack>chokidar>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>watchpack>chokidar>anymatch>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>watchpack>chokidar>anymatch>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>watchpack>chokidar>anymatch>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>watchpack>chokidar>braces>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack>watchpack>chokidar>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path:
-            'webpack>watchpack>chokidar>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack>watchpack>chokidar>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack>watchpack>chokidar>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack>watchpack>chokidar>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 646,
-          path: 'webpack>watchpack>chokidar>braces>snapdragon>source-map-resolve>atob',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      target: '4.29.6',
-      action: 'install',
-      isMajor: false,
-    },
-    {
-      action: 'install',
-      module: 'babel-jest',
-      target: '24.5.0',
-      isMajor: true,
-      resolves: [
-        {
-          id: 786,
-          path: 'babel-jest>babel-plugin-istanbul>test-exclude>micromatch>braces',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path:
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-    },
-    {
-      module: '@jetbrains/eslint-config',
-      resolves: [
-        {
-          id: 534,
-          path: '@jetbrains/eslint-config>eslint-import-resolver-webpack>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: '@jetbrains/eslint-config>eslint-plugin-import>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: '@jetbrains/eslint-config>eslint-plugin-import>eslint-module-utils>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: '@jetbrains/eslint-config>eslint-import-resolver-webpack>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: '@jetbrains/eslint-config>eslint-plugin-import>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: '@jetbrains/eslint-config>eslint-import-resolver-webpack>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: '@jetbrains/eslint-config>eslint-plugin-import>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      target: '4.0.5',
-      action: 'install',
-      isMajor: false,
-    },
-    {
-      module: '@babel/core',
-      resolves: [
-        {
-          id: 782,
-          path: '@babel/core>@babel/helpers>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/core>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: '@babel/core>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: '@babel/core>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      target: '7.4.0',
-      action: 'install',
-      isMajor: false,
-    },
-    {
-      module: 'eslint-plugin-import',
-      resolves: [
-        {
-          id: 534,
-          path: 'eslint-plugin-import>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'eslint-plugin-import>eslint-module-utils>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'eslint-plugin-import>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 577,
-          path: 'eslint-plugin-import>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      target: '2.16.0',
-      action: 'install',
-      isMajor: false,
-    },
-    {
-      module: '@babel/helper-create-class-features-plugin',
-      resolves: [
-        {
-          id: 782,
-          path:
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-member-expression-to-functions>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/helper-optimise-call-expression>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-optimise-call-expression>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      target: '7.4.0',
-      action: 'update',
-      depth: 2,
-    },
-    {
-      action: 'update',
-      module: 'debug',
-      depth: 6,
-      target: '2.6.9',
-      resolves: [
-        {
-          id: 534,
-          path: 'webpack>micromatch>extglob>expand-brackets>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>micromatch>extglob>expand-brackets>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>micromatch>extglob>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>micromatch>nanomatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: 'webpack>micromatch>snapdragon>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: '@jetbrains/ring-ui-license-checker>nlf>snyk-resolve-deps>clite>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 534,
-          path: '@jetbrains/ring-ui-license-checker>nlf>snyk-resolve-deps>debug',
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-      ],
-    },
-    {
-      module: '@babel/traverse',
-      resolves: [
-        {
-          id: 782,
-          path:
-            '@babel/core>@babel/helpers>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: '@babel/core>@babel/helpers>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            'babel-eslint>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-eslint>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      target: '7.4.0',
-      action: 'update',
-      depth: 3,
-    },
-    {
-      action: 'update',
-      module: 'lodash',
-      depth: 5,
-      target: '4.17.11',
-      resolves: [
-        {
-          id: 782,
-          path:
-            '@babel/preset-react>@babel/plugin-transform-react-jsx>@babel/helper-builder-react-jsx>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-eslint>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path: 'babel-eslint>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-    },
-    {
-      module: '@babel/helper-replace-supers',
-      resolves: [
-        {
-          id: 782,
-          path:
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/helper-member-expression-to-functions>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          id: 782,
-          path:
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/types>lodash',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      target: '7.4.0',
-      action: 'update',
-      depth: 3,
-    },
-    {
-      action: 'update',
-      module: 'js-yaml',
-      depth: 2,
-      target: '3.13.0',
-      resolves: [
-        {
-          id: 788,
-          path: 'eslint>js-yaml',
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-    },
-  ],
-  advisories: {
-    '534': {
-      findings: [
-        {
-          version: '2.6.8',
-          paths: [
-            'webpack>micromatch>braces>snapdragon>debug',
-            'webpack>micromatch>extglob>expand-brackets>debug',
-            'webpack>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'webpack>micromatch>extglob>snapdragon>debug',
-            'webpack>micromatch>nanomatch>snapdragon>debug',
-            'webpack>micromatch>snapdragon>debug',
-            'webpack>watchpack>chokidar>anymatch>micromatch>braces>snapdragon>debug',
-            'webpack>watchpack>chokidar>anymatch>micromatch>extglob>expand-brackets>debug',
-            'webpack>watchpack>chokidar>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'webpack>watchpack>chokidar>anymatch>micromatch>extglob>snapdragon>debug',
-            'webpack>watchpack>chokidar>anymatch>micromatch>nanomatch>snapdragon>debug',
-            'webpack>watchpack>chokidar>anymatch>micromatch>snapdragon>debug',
-            'webpack>watchpack>chokidar>braces>snapdragon>debug',
-            '@jetbrains/eslint-config>eslint-import-resolver-webpack>debug',
-            '@jetbrains/eslint-config>eslint-plugin-import>debug',
-            '@jetbrains/eslint-config>eslint-plugin-import>eslint-module-utils>debug',
-            '@jetbrains/ring-ui-license-checker>nlf>snyk-resolve-deps>clite>debug',
-            '@jetbrains/ring-ui-license-checker>nlf>snyk-resolve-deps>debug',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-            'eslint-plugin-import>debug',
-            'eslint-plugin-import>eslint-module-utils>debug',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-traverse>debug',
-            'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-            'jest>jest-cli>istanbul-lib-instrument>babel-traverse>debug',
-            'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-config>babel-core>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-config>babel-core>babel-traverse>debug',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-            'jest>jest-cli>jest-config>jest-jasmine2>babel-traverse>debug',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>debug',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>debug',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>debug',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>debug',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>snapdragon>debug',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>braces>snapdragon>debug',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>extglob>expand-brackets>debug',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>extglob>snapdragon>debug',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>nanomatch>snapdragon>debug',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>braces>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>extglob>expand-brackets>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>extglob>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>nanomatch>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-jasmine2>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>babel-traverse>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>braces>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>extglob>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>nanomatch>snapdragon>debug',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>snapdragon>debug',
-            'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>babel-core>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>babel-traverse>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>snapdragon>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>braces>snapdragon>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>extglob>snapdragon>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>nanomatch>snapdragon>debug',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>snapdragon>debug',
-            'webpack-dev-server>chokidar>anymatch>micromatch>braces>snapdragon>debug',
-            'webpack-dev-server>chokidar>anymatch>micromatch>extglob>expand-brackets>debug',
-            'webpack-dev-server>chokidar>anymatch>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'webpack-dev-server>chokidar>anymatch>micromatch>extglob>snapdragon>debug',
-            'webpack-dev-server>chokidar>anymatch>micromatch>nanomatch>snapdragon>debug',
-            'webpack-dev-server>chokidar>anymatch>micromatch>snapdragon>debug',
-            'webpack-dev-server>chokidar>braces>snapdragon>debug',
-            'webpack-dev-server>http-proxy-middleware>micromatch>braces>snapdragon>debug',
-            'webpack-dev-server>http-proxy-middleware>micromatch>extglob>expand-brackets>debug',
-            'webpack-dev-server>http-proxy-middleware>micromatch>extglob>expand-brackets>snapdragon>debug',
-            'webpack-dev-server>http-proxy-middleware>micromatch>extglob>snapdragon>debug',
-            'webpack-dev-server>http-proxy-middleware>micromatch>nanomatch>snapdragon>debug',
-            'webpack-dev-server>http-proxy-middleware>micromatch>snapdragon>debug',
-            'webpack-dev-server>portfinder>debug',
-            'webpack-dev-server>spdy>debug',
-            'webpack-dev-server>spdy>spdy-transport>debug',
-          ],
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      id: 534,
-      created: '2017-09-25T18:55:55.956Z',
-      updated: '2018-05-16T19:37:43.686Z',
-      deleted: null,
-      title: 'Regular Expression Denial of Service',
-      found_by: {
-        name: 'Cristian-Alexandru Staicu',
-      },
-      reported_by: {
-        name: 'Cristian-Alexandru Staicu',
-      },
-      module_name: 'debug',
-      cves: ['CVE-2017-16137'],
-      vulnerable_versions: '<= 2.6.8 || >= 3.0.0 <= 3.0.1',
-      patched_versions: '>= 2.6.9 < 3.0.0 || >= 3.1.0',
-      overview:
-        'Affected versions of `debug` are vulnerable to regular expression denial of service when untrusted user input is passed into the `o` formatter. \n\nAs it takes 50,000 characters to block the event loop for 2 seconds, this issue is a low severity issue.',
-      recommendation:
-        'Version 2.x.x: Update to version 2.6.9 or later.\nVersion 3.x.x: Update to version 3.1.0 or later.\n',
-      references:
-        '- [Issue #501](https://github.com/visionmedia/debug/issues/501)\n- [PR #504](https://github.com/visionmedia/debug/pull/504)',
-      access: 'public',
-      severity: 'low',
-      cwe: 'CWE-400',
-      metadata: {
-        module_type: '',
-        exploitability: 5,
-        affected_components: '',
-      },
-      url: 'https://npmjs.com/advisories/534',
-    },
-    '577': {
-      findings: [
-        {
-          version: '4.17.4',
-          paths: [
-            '@jetbrains/eslint-config>eslint-import-resolver-webpack>lodash',
-            '@jetbrains/eslint-config>eslint-plugin-import>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'eslint-plugin-import>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-            'jest>jest-cli>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>jest-jasmine2>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-            'jest>jest-cli>jest-resolve-dependencies>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-jasmine2>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-jasmine2>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-jasmine2>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-snapshot>babel-types>lodash',
-          ],
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      id: 577,
-      created: '2018-04-24T14:27:02.796Z',
-      updated: '2018-04-24T14:27:13.049Z',
-      deleted: null,
-      title: 'Prototype Pollution',
-      found_by: {
-        name: 'Olivier Arteau (HoLyVieR)',
-      },
-      reported_by: {
-        name: 'Olivier Arteau (HoLyVieR)',
-      },
-      module_name: 'lodash',
-      cves: ['CVE-2018-3721'],
-      vulnerable_versions: '<4.17.5',
-      patched_versions: '>=4.17.5',
-      overview:
-        "Versions of `lodash` before 4.17.5 are vulnerable to prototype pollution. \n\nThe vulnerable functions are 'defaultsDeep', 'merge', and 'mergeWith' which allow a malicious user to modify the prototype of `Object` via `__proto__` causing the addition or modification of an existing property that will exist on all objects.\n\n",
-      recommendation: 'Update to version 4.17.5 or later.',
-      references: '- [HackerOne Report](https://hackerone.com/reports/310443)',
-      access: 'public',
-      severity: 'low',
-      cwe: 'CWE-471',
-      metadata: {
-        module_type: '',
-        exploitability: 1,
-        affected_components: '',
-      },
-      url: 'https://npmjs.com/advisories/577',
-    },
-    '646': {
-      findings: [
-        {
-          version: '2.0.3',
-          paths: [
-            'webpack>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'webpack>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'webpack>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'webpack>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'webpack>micromatch>snapdragon>source-map-resolve>atob',
-            'webpack>watchpack>chokidar>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'webpack>watchpack>chokidar>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'webpack>watchpack>chokidar>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'webpack>watchpack>chokidar>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'webpack>watchpack>chokidar>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-            'webpack>watchpack>chokidar>braces>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-haste-map>sane>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-haste-map>sane>micromatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>micromatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>micromatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>micromatch>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>chokidar>anymatch>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>chokidar>anymatch>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>chokidar>anymatch>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>chokidar>anymatch>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>chokidar>anymatch>micromatch>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>chokidar>braces>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>http-proxy-middleware>micromatch>braces>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>http-proxy-middleware>micromatch>extglob>expand-brackets>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>http-proxy-middleware>micromatch>extglob>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>http-proxy-middleware>micromatch>nanomatch>snapdragon>source-map-resolve>atob',
-            'webpack-dev-server>http-proxy-middleware>micromatch>snapdragon>source-map-resolve>atob',
-          ],
-          dev: false,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      id: 646,
-      created: '2018-05-16T16:30:34.348Z',
-      updated: '2018-05-16T16:30:34.348Z',
-      deleted: null,
-      title: 'Out-of-bounds Read',
-      found_by: {
-        name: 'Сковорода Никита Андреевич',
-      },
-      reported_by: {
-        name: 'Сковорода Никита Андреевич',
-      },
-      module_name: 'atob',
-      cves: [],
-      vulnerable_versions: '<=2.0.3',
-      patched_versions: '>=2.1.0',
-      overview:
-        'Versions of `atob` before 2.1.0  uninitialized Buffers when number is passed in input on Node.js 4.x and below.',
-      recommendation: 'Update to version 2.1.0 or later.',
-      references: '- [HackerOne Report](https://hackerone.com/reports/321686)',
-      access: 'public',
-      severity: 'moderate',
-      cwe: 'CWE-125',
-      metadata: {
-        module_type: '',
-        exploitability: 2,
-        affected_components: '',
-      },
-      url: 'https://npmjs.com/advisories/646',
-    },
-    '722': {
-      findings: [
-        {
-          version: '1.2.0',
-          paths: [
-            'jest>jest-cli>jest-haste-map>sane>exec-sh>merge',
-            'jest>jest-cli>jest-haste-map>sane>watch>exec-sh>merge',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>exec-sh>merge',
-            'jest>jest-cli>jest-runner>jest-haste-map>sane>watch>exec-sh>merge',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>exec-sh>merge',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>sane>watch>exec-sh>merge',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>exec-sh>merge',
-            'jest>jest-cli>jest-runtime>jest-haste-map>sane>watch>exec-sh>merge',
-          ],
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      id: 722,
-      created: '2018-11-05T17:04:20.221Z',
-      updated: '2019-02-14T15:59:51.541Z',
-      deleted: null,
-      title: 'Prototype Pollution',
-      found_by: {
-        link: '',
-        name: 'asgerf',
-      },
-      reported_by: {
-        link: '',
-        name: 'asgerf',
-      },
-      module_name: 'merge',
-      cves: ['CVE-2018-16469'],
-      vulnerable_versions: '<=1.2.0',
-      patched_versions: '>=1.2.1',
-      overview:
-        'Versions of `merge` before 1.2.1 are vulnerable to prototype pollution. The `merge.recursive` function can be tricked into adding or modifying properties of the Object prototype.',
-      recommendation: 'Update to version 1.2.1 or later.',
-      references: '- [HackerOne Report](https://hackerone.com/reports/381194)',
-      access: 'public',
-      severity: 'low',
-      cwe: 'CWE-471',
-      metadata: {
-        module_type: '',
-        exploitability: 2,
-        affected_components: 'recursive function',
-      },
-      url: 'https://npmjs.com/advisories/722',
-    },
-    '725': {
-      findings: [
-        {
-          version: '3.1.10',
-          paths: ['webpack-dev-server'],
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      id: 725,
-      created: '2018-11-07T17:10:22.191Z',
-      updated: '2019-01-02T15:46:44.616Z',
-      deleted: null,
-      title: 'Missing Origin Validation',
-      found_by: {
-        link: 'https://blog.cal1.cn/link',
-        name: 'Jiantao Li',
-      },
-      reported_by: {
-        link: 'https://blog.cal1.cn/link',
-        name: 'Jiantao Li',
-      },
-      module_name: 'webpack-dev-server',
-      cves: ['CVE-2018-14732'],
-      vulnerable_versions: '<=3.1.10',
-      patched_versions: '>=3.1.11',
-      overview:
-        "Versions of `webpack-dev-server` before 3.1.10 are missing origin validation on the websocket server. This vulnerability allows a remote attacker to steal a developer's source code because the origin of requests to the websocket server that is used for Hot Module Replacement (HMR) are not validated.",
-      recommendation: 'Update to version 3.1.11 or later.',
-      references:
-        '- [Sniffing Codes in Hot Module Reloading Messages\n](https://blog.cal1.cn/post/Sniffing%20Codes%20in%20Hot%20Module%20Reloading%20Messages)\n- [GitHub commit](https://github.com/webpack/webpack-dev-server/commit/f18e5adf123221a1015be63e1ca2491ca45b8d10)',
-      access: 'public',
-      severity: 'high',
-      cwe: 'CWE-346',
-      metadata: {
-        module_type: '',
-        exploitability: 5,
-        affected_components: '',
-      },
-      url: 'https://npmjs.com/advisories/725',
-    },
-    '755': {
-      findings: [
-        {
-          version: '4.0.12',
-          paths: ['jest>jest-cli>istanbul-api>istanbul-reports>handlebars'],
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      id: 755,
-      created: '2018-12-28T20:34:57.708Z',
-      updated: '2019-02-18T18:59:39.186Z',
-      deleted: null,
-      title: 'Prototype Pollution',
-      found_by: {
-        link: '',
-        name: 'Mahmoud Gamal, Matías Lang',
-      },
-      reported_by: {
-        link: '',
-        name: 'Mahmoud Gamal, Matías Lang',
-      },
-      module_name: 'handlebars',
-      cves: [],
-      vulnerable_versions: '<=4.0.12',
-      patched_versions: '>=4.0.13',
-      overview:
-        "All versions of `handlebars` are vulnerable to Prototype Pollution. Templates may alter an Objects' prototype, thus allowing an attacker to execute arbitrary code on the server.",
-      recommendation: 'Upgrade to version `4.0.13` or later.',
-      references: '',
-      access: 'public',
-      severity: 'high',
-      cwe: 'CWE-471',
-      metadata: {
-        module_type: '',
-        exploitability: 6,
-        affected_components: '',
-      },
-      url: 'https://npmjs.com/advisories/755',
-    },
-    '782': {
-      findings: [
-        {
-          version: '4.17.10',
-          paths: [
-            '@babel/core>@babel/helpers>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/core>@babel/helpers>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/core>@babel/helpers>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/core>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/core>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/core>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-member-expression-to-functions>@babel/types>lodash',
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-optimise-call-expression>@babel/types>lodash',
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/helper-member-expression-to-functions>@babel/types>lodash',
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/helper-optimise-call-expression>@babel/types>lodash',
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/plugin-proposal-class-properties>@babel/helper-create-class-features-plugin>@babel/helper-replace-supers>@babel/types>lodash',
-            '@babel/preset-env>@babel/helper-module-imports>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-annotate-as-pure>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-proposal-async-generator-functions>@babel/helper-remap-async-to-generator>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-module-imports>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-annotate-as-pure>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/helper-wrap-function>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-async-to-generator>@babel/helper-remap-async-to-generator>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-annotate-as-pure>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-define-map>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-define-map>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-define-map>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-optimise-call-expression>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/helper-member-expression-to-functions>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/helper-optimise-call-expression>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-replace-supers>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-classes>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-exponentiation-operator>@babel/helper-builder-binary-assignment-operator-visitor>@babel/helper-explode-assignable-expression>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-exponentiation-operator>@babel/helper-builder-binary-assignment-operator-visitor>@babel/helper-explode-assignable-expression>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-exponentiation-operator>@babel/helper-builder-binary-assignment-operator-visitor>@babel/helper-explode-assignable-expression>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-exponentiation-operator>@babel/helper-builder-binary-assignment-operator-visitor>@babel/helper-explode-assignable-expression>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-exponentiation-operator>@babel/helper-builder-binary-assignment-operator-visitor>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-function-name>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-function-name>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-amd>@babel/helper-module-transforms>@babel/helper-module-imports>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-amd>@babel/helper-module-transforms>@babel/helper-simple-access>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-amd>@babel/helper-module-transforms>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-commonjs>@babel/helper-module-transforms>@babel/helper-module-imports>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-commonjs>@babel/helper-module-transforms>@babel/helper-simple-access>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-commonjs>@babel/helper-module-transforms>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-commonjs>@babel/helper-simple-access>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-systemjs>@babel/helper-hoist-variables>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-umd>@babel/helper-module-transforms>@babel/helper-module-imports>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-umd>@babel/helper-module-transforms>@babel/helper-simple-access>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-modules-umd>@babel/helper-module-transforms>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/helper-member-expression-to-functions>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/helper-optimise-call-expression>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-object-super>@babel/helper-replace-supers>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-call-delegate>@babel/helper-hoist-variables>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-call-delegate>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-call-delegate>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-call-delegate>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-call-delegate>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-parameters>@babel/helper-get-function-arity>@babel/types>lodash',
-            '@babel/preset-env>@babel/plugin-transform-template-literals>@babel/helper-annotate-as-pure>@babel/types>lodash',
-            '@babel/preset-react>@babel/plugin-transform-react-jsx>@babel/helper-builder-react-jsx>@babel/types>lodash',
-            'babel-eslint>@babel/traverse>@babel/helper-function-name>@babel/helper-get-function-arity>@babel/types>lodash',
-            'babel-eslint>@babel/traverse>@babel/helper-function-name>@babel/types>lodash',
-            'babel-eslint>@babel/traverse>@babel/helper-split-export-declaration>@babel/types>lodash',
-            'babel-eslint>@babel/types>lodash',
-            'jest>jest-cli>istanbul-api>async>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-reports>handlebars>async>lodash',
-            'webpack-dev-server>http-proxy-middleware>lodash',
-          ],
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-        {
-          version: '4.17.4',
-          paths: [
-            '@jetbrains/eslint-config>eslint-import-resolver-webpack>lodash',
-            '@jetbrains/eslint-config>eslint-plugin-import>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'eslint-plugin-import>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>istanbul-api>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-core>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-            'jest>jest-cli>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-config>jest-jasmine2>babel-traverse>lodash',
-            'jest>jest-cli>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-            'jest>jest-cli>jest-resolve-dependencies>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-core>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-jasmine2>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-jasmine2>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-jasmine2>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-core>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-core>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>babel-traverse>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-core>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-generator>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-helpers>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-register>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-core>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-generator>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-template>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>istanbul-lib-instrument>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>jest-environment-jsdom>jsdom>request-promise-native>request-promise-core>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>babel-traverse>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>babel-traverse>lodash',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-runtime>jest-snapshot>babel-types>lodash',
-            'jest>jest-cli>jest-snapshot>babel-types>lodash',
-          ],
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      id: 782,
-      created: '2019-02-13T16:16:53.770Z',
-      updated: '2019-02-13T16:16:53.770Z',
-      deleted: null,
-      title: 'Prototype Pollution',
-      found_by: {
-        link: '',
-        name: 'asgerf',
-      },
-      reported_by: {
-        link: '',
-        name: 'asgerf',
-      },
-      module_name: 'lodash',
-      cves: ['CVE-2018-16487'],
-      vulnerable_versions: '<4.17.11',
-      patched_versions: '>=4.17.11',
-      overview:
-        "Versions of `lodash` before 4.17.5 are vulnerable to prototype pollution. \n\nThe vulnerable functions are 'defaultsDeep', 'merge', and 'mergeWith' which allow a malicious user to modify the prototype of `Object` via `{constructor: {prototype: {...}}}` causing the addition or modification of an existing property that will exist on all objects.\n\n",
-      recommendation: 'Update to version 4.17.11 or later.',
-      references: '- [HackerOne Report](https://hackerone.com/reports/380873)',
-      access: 'public',
-      severity: 'moderate',
-      cwe: 'CWE-471',
-      metadata: {
-        module_type: '',
-        exploitability: 3,
-        affected_components: '',
-      },
-      url: 'https://npmjs.com/advisories/782',
-    },
-    '786': {
-      findings: [
-        {
-          version: '1.8.5',
-          paths: [
-            'babel-jest>babel-plugin-istanbul>test-exclude>micromatch>braces',
-            'jest>jest-cli>jest-config>babel-jest>babel-plugin-istanbul>test-exclude>micromatch>braces',
-            'jest>jest-cli>jest-config>jest-environment-jsdom>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-config>jest-environment-node>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-config>jest-jasmine2>expect>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-config>jest-jasmine2>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-config>jest-jasmine2>jest-snapshot>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-config>jest-jasmine2>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-config>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-config>micromatch>braces',
-            'jest>jest-cli>jest-environment-jsdom>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-haste-map>micromatch>braces',
-            'jest>jest-cli>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-resolve-dependencies>jest-snapshot>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-config>babel-jest>babel-plugin-istanbul>test-exclude>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-config>jest-environment-jsdom>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-config>jest-environment-node>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>expect>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>jest-snapshot>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-config>jest-jasmine2>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-config>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-config>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-haste-map>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-jasmine2>expect>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-jasmine2>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-jasmine2>jest-snapshot>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-jasmine2>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>babel-plugin-istanbul>test-exclude>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>test-exclude>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-environment-jsdom>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-environment-node>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>expect>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-jasmine2>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-config>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-haste-map>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-snapshot>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-runtime>micromatch>braces',
-            'jest>jest-cli>jest-runner>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>babel-plugin-istanbul>test-exclude>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-config>babel-jest>babel-plugin-istanbul>test-exclude>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-config>jest-environment-jsdom>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-config>jest-environment-node>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>expect>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>jest-snapshot>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-config>jest-jasmine2>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-config>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-config>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-haste-map>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-snapshot>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-runtime>micromatch>braces',
-            'jest>jest-cli>jest-snapshot>jest-message-util>micromatch>braces',
-            'jest>jest-cli>jest-util>jest-message-util>micromatch>braces',
-            'jest>jest-cli>micromatch>braces',
-          ],
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      id: 786,
-      created: '2019-02-15T21:44:30.680Z',
-      updated: '2019-02-15T21:44:30.680Z',
-      deleted: null,
-      title: 'Regular Expression Denial of Service',
-      found_by: {
-        link: '',
-        name: 'Santosh Rao',
-      },
-      reported_by: {
-        link: '',
-        name: 'Santosh Rao',
-      },
-      module_name: 'braces',
-      cves: [],
-      vulnerable_versions: '<2.3.1',
-      patched_versions: '>=2.3.1',
-      overview:
-        'Version of `braces` prior to 2.3.1 are vulnerable to Regular Expression Denial of Service (ReDoS). Untrusted input may cause catastrophic backtracking while matching regular expressions. This can cause the application to be unresponsive leading to Denial of Service.',
-      recommendation: 'Upgrade to version 2.3.1 or higher.',
-      references:
-        '- [GitHub Commit](https://github.com/micromatch/braces/commit/abdafb0cae1e0c00f184abbadc692f4eaa98f451)',
-      access: 'public',
-      severity: 'low',
-      cwe: 'CWE-185',
-      metadata: {
-        module_type: '',
-        exploitability: 4,
-        affected_components: '',
-      },
-      url: 'https://npmjs.com/advisories/786',
-    },
-    '788': {
-      findings: [
-        {
-          version: '3.12.0',
-          paths: ['eslint>js-yaml', 'jest>jest-cli>istanbul-api>js-yaml'],
-          dev: true,
-          optional: false,
-          bundled: false,
-        },
-      ],
-      id: 788,
-      created: '2019-03-18T21:29:08.514Z',
-      updated: '2019-03-21T20:31:05.113Z',
-      deleted: null,
-      title: 'Denial of Service',
-      found_by: {
-        link: 'https://sites.google.com/site/jensdietrich/',
-        name: 'Shawn Rasheed, Jens DIetrich',
-      },
-      reported_by: {
-        link: 'https://conf.researchr.org/profile/shawnrasheed',
-        name: 'Shawn Rasheed',
-      },
-      module_name: 'js-yaml',
-      cves: [],
-      vulnerable_versions: '<3.13.0',
-      patched_versions: '>=3.13.0',
-      overview:
-        'Versions `js-yaml` prior to 3.13.0 are vulnerable to Denial of Service. By parsing a carefully-crafted YAML file, the node process stalls and may exhaust system resources leading to a Denial of Service.',
-      recommendation: 'Upgrade to version 3.13.0.',
-      references: '',
-      access: 'public',
-      severity: 'moderate',
-      cwe: 'CWE-400',
-      metadata: {
-        module_type: '',
-        exploitability: 6,
-        affected_components: '',
-      },
-      url: 'https://npmjs.com/advisories/788',
-    },
-  },
-  muted: [],
-  metadata: {
-    vulnerabilities: {
-      info: 0,
-      low: 394,
-      moderate: 353,
-      high: 2,
-      critical: 0,
-    },
-    dependencies: 3671,
-    devDependencies: 24234,
-    optionalDependencies: 625,
-    totalDependencies: 28002,
-  },
-  runId: 'd14f15fd-308c-4a8a-b2b4-df66cb596557',
-};
+    "metadata": {
+        "vulnerabilities": {
+            "info": 0,
+            "low": 4,
+            "moderate": 8,
+            "high": 12,
+            "critical": 3,
+            "total": 27
+        },
+        "dependencies": {
+            "prod": 144,
+            "dev": 628,
+            "optional": 18,
+            "peer": 0,
+            "peerOptional": 0,
+            "total": 771
+        }
+    }
+}
+
