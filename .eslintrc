@@ -87,8 +87,6 @@
             "off",
             "as-needed"
         ],
-        "complexity": "off",
-        "constructor-super": "error",
         "curly": "error",
         "dot-notation": "error",
         "eol-last": "off",
@@ -102,11 +100,7 @@
         "newline-per-chained-call": "off",
         "no-bitwise": "error",
         "no-caller": "error",
-        "no-cond-assign": "error",
         "no-console": "error",
-        "no-debugger": "error",
-        "no-duplicate-case": "error",
-        "no-empty": "error",
         "no-empty-function": "error",
         "no-extra-bind": "error",
         "no-extra-semi": "off",
@@ -119,12 +113,9 @@
         "no-prototype-builtins": "off",
         "no-return-await": "error",
         "no-sequences": "error",
-        "no-sparse-arrays": "error",
         "no-template-curly-in-string": "error",
         "no-throw-literal": "error",
         "no-undef-init": "error",
-        "no-unsafe-finally": "error",
-        "no-unused-labels": "error",
         "no-var": "error",
         "object-shorthand": "error",
         "prefer-const": "error",
@@ -132,7 +123,6 @@
         "quote-props": "off",
         "radix": "error",
         "space-before-function-paren": "off",
-        "use-isnan": "error",
         "valid-typeof": "off",
         "@typescript-eslint/tslint/config": [
             "error",
@@ -196,7 +186,6 @@
         }
     },
     {
-
         "files": [ "src/legacy/reporter.ts", "src/reporter.ts"],
         "rules":  {
             "@typescript-eslint/naming-convention": [
