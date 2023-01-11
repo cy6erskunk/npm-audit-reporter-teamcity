@@ -1,5 +1,5 @@
+import { API } from 'teamcity-service-messages';
 import { IConfig } from '../config';
-import { TeamcityServiceMessages } from '../model';
 import { debug } from '../util';
 import { IAuditLegacyMetadata, IAuditLegacyOutput } from './model';
 
@@ -15,7 +15,7 @@ function isVulnerable(auditMetadata: IAuditLegacyMetadata) {
 }
 
 export default function reporter(
-  tsm: TeamcityServiceMessages,
+  tsm: API<true>,
   { inspectionTypeId, inspectionName, inspectionCategory, inspectionSeverity }: IConfig,
   auditResult: IAuditLegacyOutput,
 ) {
@@ -38,7 +38,7 @@ export default function reporter(
 severity: ${advisoryElement.severity},
 versions: ${advisoryElement.findings.map((f) => f.version).join(', ')},
 dependency of: ${advisoryElement.findings
-          .reduce((acc, prev) => {
+          .reduce<string[]>((acc, prev) => {
             prev.paths.forEach((path) => {
               const dependencyOf = path.split('>')[0];
               if (!acc.includes(dependencyOf)) {

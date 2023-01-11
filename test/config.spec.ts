@@ -1,5 +1,5 @@
+import { join } from 'path';
 import { CONFIG_FILENAME, defaultConfig, getConfig, IUserConfig } from '../src/config';
-import {join} from 'path';
 
 describe('getConfig', () => {
   it('returns default config by default', () => {
@@ -17,7 +17,7 @@ describe('getConfig', () => {
 
     expect(config.inspectionCategory).toEqual(overrideSettings.inspectionCategory);
     Object.keys(config)
-      .filter(key => !Object.keys(overrideSettings).includes(key))
+      .filter((key) => !Object.keys(overrideSettings).includes(key))
       .map((key: keyof IUserConfig) => expect(config[key]).toEqual(defaultConfig[key]));
     expect(Object.keys(config).length).toBe(4);
     mockSettings.resetAllMocks();
