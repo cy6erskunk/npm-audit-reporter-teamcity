@@ -92,6 +92,7 @@
         "curly": "error",
         "dot-notation": "error",
         "eol-last": "off",
+        "eqeqeq": ["error", "smart"],
         "guard-for-in": "error",
         "linebreak-style": "off",
         "max-classes-per-file": [
@@ -114,69 +115,31 @@
         "no-new-wrappers": "error",
         "no-prototype-builtins": "off",
         "no-return-await": "error",
+        "no-redeclare": "error",
         "no-sequences": "error",
+        "no-shadow": "error",
         "no-template-curly-in-string": "error",
         "no-throw-literal": "error",
         "no-undef-init": "error",
+        "no-unused-expressions":"error",
         "no-var": "error",
         "object-shorthand": "error",
         "prefer-const": "error",
         "prefer-object-spread": "error",
         "quote-props": "off",
         "radix": "error",
+        "sort-keys": "error",
         "space-before-function-paren": "off",
+        "spaced-comment": "error",
         "valid-typeof": "off",
+        "import/no-extraneous-dependencies": "error",
         "import/order": ["error", {
             "alphabetize": {
                 "order": "asc",
                 "caseInsensitive": true
             }
         }],
-        "@typescript-eslint/tslint/config": [
-            "error",
-            {
-                "rulesDirectory": [
-                    "./node_modules/tslint-plugin-prettier/rules"
-                ],
-                "rules": {
-                    "comment-format": [
-                        true,
-                        "check-space"
-                    ],
-                    "jsdoc-format": [
-                        true,
-                        "check-multiline-start"
-                    ],
-                    "no-duplicate-variable": [
-                        true,
-                        "check-parameters"
-                    ],
-                    "no-implicit-dependencies": true,
-                    "no-reference-import": true,
-                    "no-shadowed-variable": true,
-                    "no-submodule-imports": true,
-                    "no-unused-expression": true,
-                    "object-literal-sort-keys": true,
-                    "only-arrow-functions": [
-                        true,
-                        "allow-declarations",
-                        "allow-named-functions"
-                    ],
-                    "prefer-conditional-expression": true,
-                    "prettier": true,
-                    "triple-equals": [
-                        true,
-                        "allow-null-check"
-                    ],
-                    "variable-name": [
-                        true,
-                        "ban-keywords",
-                        "check-format",
-                        "allow-pascal-case"
-                    ]
-                }
-            }
-        ]
+        "import/no-internal-modules": "error"
     },
     "overrides": [{
         "files": [ "src/util.ts"],
