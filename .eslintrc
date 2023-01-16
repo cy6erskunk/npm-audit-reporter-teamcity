@@ -10,11 +10,13 @@
     },
     "extends": [
         "eslint:recommended",
+        "plugin:import/recommended",
         "prettier",
         "plugin:prettier/recommended"
     ],
     "plugins": [
         "prettier",
+        "import",
         "@typescript-eslint",
         "@typescript-eslint/tslint"
     ],
@@ -124,6 +126,12 @@
         "radix": "error",
         "space-before-function-paren": "off",
         "valid-typeof": "off",
+        "import/order": ["error", {
+            "alphabetize": {
+                "order": "asc",
+                "caseInsensitive": true
+            }
+        }],
         "@typescript-eslint/tslint/config": [
             "error",
             {
@@ -139,7 +147,6 @@
                         true,
                         "check-multiline-start"
                     ],
-                    "no-duplicate-imports": true,
                     "no-duplicate-variable": [
                         true,
                         "check-parameters"
@@ -154,14 +161,6 @@
                         true,
                         "allow-declarations",
                         "allow-named-functions"
-                    ],
-                    "ordered-imports": [
-                        true,
-                        {
-                            "import-sources-order": "case-insensitive",
-                            "module-source-path": "full",
-                            "named-imports-order": "case-insensitive"
-                        }
                     ],
                     "prefer-conditional-expression": true,
                     "prettier": true,
@@ -217,5 +216,12 @@
                 }
             ]
         }
-    }]
+    }],
+    "settings": {
+        "import/resolver": {
+            "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    }
 }
