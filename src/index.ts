@@ -9,7 +9,7 @@ process.stdin.on('data', (data) => {
   input += data.toString();
 });
 
-process.stdin.on('end', (data) => {
+process.stdin.on('end', () => {
   const reporter = reporterFactory(tsm, getConfig());
   reporter(JSON.parse(input));
 });

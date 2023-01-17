@@ -9,13 +9,15 @@
         "sourceType": "module"
     },
     "extends": [
+        "eslint:recommended",
+        "plugin:import/recommended",
         "prettier",
         "plugin:prettier/recommended"
     ],
     "plugins": [
         "prettier",
-        "@typescript-eslint",
-        "@typescript-eslint/tslint"
+        "import",
+        "@typescript-eslint"
     ],
     "rules": {
         "@typescript-eslint/adjacent-overload-signatures": "error",
@@ -86,11 +88,10 @@
             "off",
             "as-needed"
         ],
-        "complexity": "off",
-        "constructor-super": "error",
         "curly": "error",
         "dot-notation": "error",
         "eol-last": "off",
+        "eqeqeq": ["error", "smart"],
         "guard-for-in": "error",
         "linebreak-style": "off",
         "max-classes-per-file": [
@@ -101,11 +102,7 @@
         "newline-per-chained-call": "off",
         "no-bitwise": "error",
         "no-caller": "error",
-        "no-cond-assign": "error",
         "no-console": "error",
-        "no-debugger": "error",
-        "no-duplicate-case": "error",
-        "no-empty": "error",
         "no-empty-function": "error",
         "no-extra-bind": "error",
         "no-extra-semi": "off",
@@ -115,77 +112,33 @@
         "no-multiple-empty-lines": "off",
         "no-new-func": "error",
         "no-new-wrappers": "error",
+        "no-prototype-builtins": "off",
         "no-return-await": "error",
+        "no-redeclare": "error",
         "no-sequences": "error",
-        "no-sparse-arrays": "error",
+        "no-shadow": "error",
         "no-template-curly-in-string": "error",
         "no-throw-literal": "error",
         "no-undef-init": "error",
-        "no-unsafe-finally": "error",
-        "no-unused-labels": "error",
+        "no-unused-expressions":"error",
         "no-var": "error",
         "object-shorthand": "error",
         "prefer-const": "error",
         "prefer-object-spread": "error",
         "quote-props": "off",
         "radix": "error",
+        "sort-keys": "error",
         "space-before-function-paren": "off",
-        "use-isnan": "error",
+        "spaced-comment": "error",
         "valid-typeof": "off",
-        "@typescript-eslint/tslint/config": [
-            "error",
-            {
-                "rulesDirectory": [
-                    "./node_modules/tslint-plugin-prettier/rules"
-                ],
-                "rules": {
-                    "comment-format": [
-                        true,
-                        "check-space"
-                    ],
-                    "jsdoc-format": [
-                        true,
-                        "check-multiline-start"
-                    ],
-                    "no-duplicate-imports": true,
-                    "no-duplicate-variable": [
-                        true,
-                        "check-parameters"
-                    ],
-                    "no-implicit-dependencies": true,
-                    "no-reference-import": true,
-                    "no-shadowed-variable": true,
-                    "no-submodule-imports": true,
-                    "no-unused-expression": true,
-                    "object-literal-sort-keys": true,
-                    "only-arrow-functions": [
-                        true,
-                        "allow-declarations",
-                        "allow-named-functions"
-                    ],
-                    "ordered-imports": [
-                        true,
-                        {
-                            "import-sources-order": "case-insensitive",
-                            "module-source-path": "full",
-                            "named-imports-order": "case-insensitive"
-                        }
-                    ],
-                    "prefer-conditional-expression": true,
-                    "prettier": true,
-                    "triple-equals": [
-                        true,
-                        "allow-null-check"
-                    ],
-                    "variable-name": [
-                        true,
-                        "ban-keywords",
-                        "check-format",
-                        "allow-pascal-case"
-                    ]
-                }
+        "import/no-extraneous-dependencies": "error",
+        "import/order": ["error", {
+            "alphabetize": {
+                "order": "asc",
+                "caseInsensitive": true
             }
-        ]
+        }],
+        "import/no-internal-modules": "error"
     },
     "overrides": [{
         "files": [ "src/util.ts"],
@@ -194,7 +147,6 @@
         }
     },
     {
-
         "files": [ "src/legacy/reporter.ts", "src/reporter.ts"],
         "rules":  {
             "@typescript-eslint/naming-convention": [
@@ -226,5 +178,12 @@
                 }
             ]
         }
-    }]
+    }],
+    "settings": {
+        "import/resolver": {
+            "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    }
 }
