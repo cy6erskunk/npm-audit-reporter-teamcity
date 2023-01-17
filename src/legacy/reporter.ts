@@ -14,7 +14,7 @@ function isVulnerable(auditMetadata: IAuditLegacyMetadata) {
   );
 }
 
-export default function reporter(
+export function legacyReporter(
   tsm: API<true>,
   { inspectionTypeId, inspectionName, inspectionCategory, inspectionSeverity }: IConfig,
   auditResult: IAuditLegacyOutput,
@@ -57,3 +57,5 @@ advisory: ${advisoryElement.url}`,
     });
   }
 }
+
+export default legacyReporter;

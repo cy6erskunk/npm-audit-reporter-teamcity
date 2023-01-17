@@ -1,7 +1,6 @@
 import { API } from 'teamcity-service-messages';
 import { IConfig } from './config';
-import { IAuditLegacyOutput } from './legacy/model';
-import legacyReporter from './legacy/reporter';
+import { IAuditLegacyOutput, legacyReporter } from './legacy';
 import { IAuditOutput, IMetadata, ISource } from './model';
 import { debug } from './util';
 
