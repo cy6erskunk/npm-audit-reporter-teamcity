@@ -17,8 +17,7 @@
     "plugins": [
         "prettier",
         "import",
-        "@typescript-eslint",
-        "@typescript-eslint/tslint"
+        "@typescript-eslint"
     ],
     "rules": {
         "@typescript-eslint/adjacent-overload-signatures": "error",
