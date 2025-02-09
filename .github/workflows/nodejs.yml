@@ -13,8 +13,8 @@ jobs:
 
     strategy:
       matrix:
-        os: [macOS-11, windows-2022, ubuntu-20.04]
-        node-version: [14.x, 16.x, 18.x]
+        os: [macOS-latest, windows-latest, ubuntu-latest]
+        node-version: [18.x, 20.x, 22.x]
 
     steps:
     - name: configure git
